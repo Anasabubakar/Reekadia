@@ -1,158 +1,136 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowRight, Play, Calendar, ShoppingBag } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0">
-      
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
-        
-        <div className="container relative z-10 px-4 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white mb-6 drop-shadow-2xl"
-          >
-            Gbedu Wey Dey <br/> Burst Brain
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-2xl text-gray-300 font-light mb-10 max-w-2xl mx-auto"
-          >
-            The Official Home of Reekado Banks & Reekadia Records
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link 
-              href="/music"
-              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold uppercase tracking-wider rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.5)] flex items-center justify-center gap-2"
-            >
-              <Play size={20} fill="currentColor" /> Listen Now
-            </Link>
-            <Link 
-              href="/tour"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold uppercase tracking-wider rounded-full transition-all hover:scale-105 flex items-center justify-center gap-2"
-            >
-              <Calendar size={20} /> Tour Dates
-            </Link>
-          </motion.div>
+    <>
+      {/* Background Video Simulation */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        {/* Overlay Gradient for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#221010]/50 to-[#110505] z-10"></div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTs4puAZwAsYPIc7JyVNVaARP5glMrFeMu1cLtHFbUNK0DRzw_bGcRzrHAssrbDfM_jve8jG9h9XqohJRBRwA5WwW7IK_jjvuTXRMC523PjfiROaEGtqKyWB1tjlW6lmPuxEynhCN9rZh9z58-k2NY29J_9wm8g0D3nN3wfU7tFOnccxTbucFIuvwf1EcKaFUmFPNtrRZUE5Nen7Grm-ZTAwmB-4Ovy1LGb-rFBNRN2BAU3uGOQhDzfDIBAoIuo-dbikxoJITRtOg')" }}
+          aria-label="Reekado Banks performing on a dark stage with red lights"
+        >
         </div>
-      </section>
+        {/* Ambient Glow Blobs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/30 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
+      </div>
 
-      {/* Latest Release */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+      <div className="relative z-10 flex flex-col h-full min-h-screen">
+        <main className="flex-grow flex flex-col items-center justify-center px-4 py-12 md:py-20 w-full">
+          <div className="layout-content-container flex flex-col max-w-[960px] w-full gap-12 md:gap-20">
+            {/* Hero Content */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full md:w-1/2 aspect-square relative group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col items-center text-center gap-8 animate-float"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-pink-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
-              <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-black/50 backdrop-blur-sm shadow-2xl">
-                 {/* Placeholder for Album Art */}
-                 <div className="w-full h-full bg-neutral-900 flex items-center justify-center text-neutral-700 font-bold text-4xl">
-                    ALBUM ART
-                 </div>
+              <div className="flex flex-col gap-2">
+                <h2 className="text-primary text-sm md:text-base font-bold tracking-[0.2em] uppercase">The Official Home of Reekado Banks</h2>
+                <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-glow drop-shadow-2xl">
+                  Gbedu wey dey <br className="hidden md:block"/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">burst brain</span>
+                </h1>
               </div>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full md:w-1/2"
-            >
-              <h4 className="text-purple-400 font-bold uppercase tracking-widest mb-2">New Release</h4>
-              <h2 className="text-4xl md:text-6xl font-black uppercase text-white mb-6 leading-none">The Game <br/> Needs You</h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Experience the latest sonic masterpiece from Reekado Banks. A journey through rhythm, soul, and pure energy. Stream it now on all platforms.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="px-6 py-3 rounded-xl bg-[#1DB954] text-black font-bold flex items-center gap-2 hover:bg-[#1ed760] transition-colors">
-                   Spotify
+              <div className="flex flex-wrap gap-4 justify-center mt-4">
+                <button className="group relative flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary hover:bg-red-600 text-white text-base font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(236,19,19,0.5)]">
+                  <span className="mr-2 material-symbols-outlined filled">play_circle</span>
+                  <span className="truncate">Listen Now</span>
+                  <div className="absolute inset-0 rounded-full ring-2 ring-white/20 group-hover:ring-white/40"></div>
                 </button>
-                <button className="px-6 py-3 rounded-xl bg-[#FA243C] text-white font-bold flex items-center gap-2 hover:bg-[#ff364e] transition-colors">
-                   Apple Music
+                <button className="group flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-base font-bold transition-all hover:scale-105">
+                  <span className="truncate">View Tour Dates</span>
                 </button>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Quick Links Grid */}
-      <section className="py-24 bg-black/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: 'Music Videos', subtitle: 'Watch the visuals', link: '/videos', icon: <Play /> },
-              { title: 'Merch Store', subtitle: 'Wear the brand', link: '/merch', icon: <ShoppingBag /> },
-              { title: 'Tour Dates', subtitle: 'See it live', link: '/tour', icon: <Calendar /> },
-            ].map((item, index) => (
-              <Link href={item.link} key={index} className="group">
-                <div className="glass-card p-8 rounded-2xl h-full flex flex-col justify-between min-h-[250px] relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-32 bg-purple-600/10 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-purple-600/20"></div>
-                  
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6 text-white group-hover:bg-purple-600 transition-colors">
-                    {item.icon}
+            {/* Featured Release Glass Card */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="w-full max-w-2xl mx-auto"
+            >
+              <div className="flex items-center gap-2 mb-4 px-2 opacity-90">
+                <span className="material-symbols-outlined text-primary text-xl">new_releases</span>
+                <h3 className="text-white text-sm font-bold tracking-widest uppercase">Featured Release</h3>
+              </div>
+              <div className="glass-panel p-6 rounded-[2.5rem] relative overflow-hidden group">
+                {/* Decorative glow inside card */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                <div className="flex flex-col md:flex-row gap-6 items-center md:items-stretch relative z-10">
+                  {/* Album Art */}
+                  <div className="relative w-full md:w-48 aspect-square shrink-0 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 group-hover:scale-[1.02] transition-transform duration-500">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center" 
+                      style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDimcYaZSlxpyBAMf2ezPooV7SzafvrJ5EEe-XXAQRWdSwz_Sogj52w2dlKHh7jHAbBwJdlLIk_Uidu3kPLqfAIL-4aaCFmTBY2qY1sisp8Xo2uL7QyQOVwyDtLRKWXlFfhJvPTyVyhhxYSwUVvZBMbikAnfiBBCrLs9mFPICYOOJyx3FRPvaEGv8oyYIKR_WfUpPY9VM_ski2RTTj5uYWm_7Lgubchvs_SkTJE9U4qwMn2WwzMlUCzAQyDw3EqG-beiPE1b3d7yrs')" }}
+                      aria-label="Abstract vibrant artwork for 'The Game Needs You' single"
+                    >
+                    </div>
+                    {/* Play Overlay */}
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="material-symbols-outlined text-white text-5xl drop-shadow-lg">play_circle</span>
+                    </div>
                   </div>
-                  
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-white mb-2 uppercase">{item.title}</h3>
-                    <p className="text-gray-400 flex items-center gap-2 group-hover:text-white transition-colors">
-                      {item.subtitle} <ArrowRight size={16} />
-                    </p>
+                  {/* Track Info & Player */}
+                  <div className="flex flex-col justify-between flex-1 w-full gap-4">
+                    <div className="flex flex-col gap-1 text-center md:text-left">
+                      <h4 className="text-white text-2xl md:text-3xl font-bold leading-tight">The Game Needs You</h4>
+                      <p className="text-red-200/80 text-sm font-medium tracking-wide">New Single • Afrobeats</p>
+                    </div>
+                    {/* Visualizer Simulation & Progress */}
+                    <div className="flex flex-col gap-3 glass-panel-light rounded-xl p-4 mt-auto">
+                      {/* Waveform Bars */}
+                      <div className="flex items-end justify-between gap-1 h-8 opacity-80 px-1">
+                        <div className="w-1 bg-primary rounded-full h-[40%] animate-[pulse_1s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary rounded-full h-[70%] animate-[pulse_1.2s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary rounded-full h-[100%] animate-[pulse_0.8s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/50 rounded-full h-[50%] animate-[pulse_1.5s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/50 rounded-full h-[30%] animate-[pulse_1.1s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/50 rounded-full h-[60%] animate-[pulse_0.9s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/30 rounded-full h-[40%] animate-[pulse_1.3s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/30 rounded-full h-[80%] animate-[pulse_1.4s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-primary/30 rounded-full h-[20%] animate-[pulse_1s_ease-in-out_infinite]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[40%]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[60%]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[30%]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[50%]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[70%]"></div>
+                        <div className="w-1 bg-white/20 rounded-full h-[20%]"></div>
+                      </div>
+                      {/* Progress Bar */}
+                      <div className="flex items-center gap-3">
+                        <span className="text-[10px] font-mono text-gray-400">0:00</span>
+                        <div className="h-1 flex-1 bg-white/10 rounded-full overflow-hidden">
+                          <div className="h-full w-[35%] bg-primary rounded-full relative"></div>
+                        </div>
+                        <span className="text-[10px] font-mono text-gray-400">3:14</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between md:justify-start gap-4 mt-2">
+                      <button className="flex items-center justify-center size-10 rounded-full bg-white text-primary hover:bg-gray-200 transition-colors">
+                        <span className="material-symbols-outlined text-2xl fill-current">play_arrow</span>
+                      </button>
+                      <div className="flex gap-4">
+                        <button className="text-gray-400 hover:text-white transition-colors"><span className="material-symbols-outlined">skip_previous</span></button>
+                        <button className="text-gray-400 hover:text-white transition-colors"><span className="material-symbols-outlined">skip_next</span></button>
+                        <button className="text-gray-400 hover:text-primary transition-colors"><span className="material-symbols-outlined">favorite</span></button>
+                        <button className="text-gray-400 hover:text-white transition-colors ml-2"><span className="material-symbols-outlined">share</span></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </Link>
-            ))}
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-purple-900/20"></div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase">Join the Family</h2>
-          <p className="text-gray-400 mb-10 max-w-lg mx-auto">
-            Be the first to know about new releases, exclusive merch drops, and tour announcements.
-          </p>
-          
-          <form className="max-w-md mx-auto relative">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              className="w-full px-6 py-4 rounded-full bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all pr-36"
-            />
-            <button 
-              type="submit"
-              className="absolute right-1 top-1 bottom-1 px-6 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-full transition-colors uppercase text-sm tracking-wide"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-
-    </div>
+        </main>
+      </div>
+    </>
   );
 }
