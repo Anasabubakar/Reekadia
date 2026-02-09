@@ -8,91 +8,91 @@ const releases = [
     title: 'The Game Needs You',
     type: 'Album',
     link: 'https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=MqkOTlZDTUGhD6d6NUrLRA',
-    imageUrl: '/images/song-cover-art/Untitled design - 1.png'
+    imageUrl: '/images/song-cover-art/the-game-needs-you.png'
   },
   {
     title: 'Glamorous Ft Mayorkun',
     type: 'Single',
     link: 'https://open.spotify.com/album/6FI7fgpszgy8ZZODsis6Pi?si=ndjpq33mQ2SyNxZWLoKGGg',
-    imageUrl: '/images/song-cover-art/Untitled design - 2.png'
+    imageUrl: '/images/song-cover-art/glamorous.png'
   },
   {
     title: 'Mukutu',
     type: 'Single',
     link: 'https://open.spotify.com/album/4Q2pEBNlOZAhdIDdtOZI2Z?si=eYk95xgGTcGxXZRMNQgo-Q',
-    imageUrl: '/images/song-cover-art/Untitled design - 3.png'
+    imageUrl: '/images/song-cover-art/mukutu.png'
   },
   {
     title: 'Solo',
     type: 'Single',
     link: 'https://open.spotify.com/album/7wQgtOaa74hP33p7xzkRHO?si=sKpOVXvIQLCc3ue-eB2g6Q',
-    imageUrl: '/images/song-cover-art/Untitled design - 4.png'
+    imageUrl: '/images/song-cover-art/solo.png'
   },
   {
     title: 'Fakosi Ft Seyi Vibez, DelB',
     type: 'Single',
     link: 'https://open.spotify.com/album/3YPNvgCesJrEaLZgZLXzdt?si=Lz7K2DkvSk6vQ6iG47Aq3Q',
-    imageUrl: '/images/song-cover-art/Untitled design - 5.png'
+    imageUrl: '/images/song-cover-art/fakosi.png'
   },
   {
     title: 'Feeling Different Ft Adekunle Gold, Maleek Berry',
     type: 'Single',
     link: 'https://open.spotify.com/album/3WkYJGUSNOTvGoe4YkIVjM?si=RKJi7c9KRnyfmjBh99GHhA',
-    imageUrl: '/images/song-cover-art/Untitled design - 6.png'
+    imageUrl: '/images/song-cover-art/feel-different.png'
   },
   {
     title: 'Ozumba Mbadiwe',
     type: 'Single',
     link: 'https://open.spotify.com/album/6oYKhPbYdaaYGGnqZIqlNs?si=lQwAqUwgSK-NLXO5771iKA',
-    imageUrl: '/images/song-cover-art/Untitled design - 7.png'
+    imageUrl: '/images/song-cover-art/ozumba-mbadiwe.png'
   },
   {
     title: 'OTR VOL. 2 | WHERE DID WE STOP?',
     type: 'EP',
     link: 'https://open.spotify.com/album/6YbuBOhChrDQBd8jeIvhjj?si=7V9fG49HTJGRdhxZHk7NPw',
-    imageUrl: '/images/song-cover-art/Untitled design - 8.png'
+    imageUrl: '/images/song-cover-art/where-did-we-stop.png'
   },
   {
     title: 'OFF THE RECORD',
     type: 'EP',
     link: 'https://open.spotify.com/album/2U8mtLvqgQVcrCx4V7H1HJ?si=1MZnyPmGSU-3pUWKT0e5vg',
-    imageUrl: '/images/song-cover-art/Untitled design - 9.png'
+    imageUrl: '/images/song-cover-art/Untitled design - 10.png'
   },
   {
     title: 'Omolomo Ft Wizkid',
     type: 'Single',
     link: 'https://open.spotify.com/album/6EQxI2JlN9WV4hXWCbdhfl?si=jBztS2FtRTuU9AczcIn64A',
-    imageUrl: '/images/song-cover-art/Untitled design - 10.png'
+    imageUrl: '/images/song-cover-art/omo-olomo.png'
   },
   {
     title: 'Rora',
     type: 'Single',
     link: 'https://open.spotify.com/album/1YoKg4rLeRUTxjs9jyYk3u?si=hEyjEEaARWOXSvBtrV2YKw',
-    imageUrl: '/images/song-cover-art/Untitled design - 11.png'
+    imageUrl: '/images/song-cover-art/rora.png'
   },
   {
     title: 'Like',
     type: 'Single',
     link: 'https://open.spotify.com/album/38qliUD5SEnqbPbHz8sJlW?si=nIAk3LZXRsKpgPo3GXx5aQ',
-    imageUrl: '/images/song-cover-art/Untitled design - 12.png'
+    imageUrl: '/images/song-cover-art/like.png'
   },
   {
     title: 'Easy Jeje',
     type: 'Single',
     link: 'https://open.spotify.com/album/2Tc7JXLB2WpKkKegbhrGna?si=4sYlF3LYQAeAKgVzwTEtVg',
-    imageUrl: '/images/song-cover-art/Untitled design - 13.png'
+    imageUrl: '/images/song-cover-art/easy(jeje).png'
   },
   {
     title: 'Katapot',
     type: 'Single',
     link: 'https://open.spotify.com/album/1YpcjDbbS3vAnYvm5KT1zab?si=5FJRO6yhR42q3Twb41tQBA',
-    imageUrl: '/images/song-cover-art/Untitled design - 14.png'
+    imageUrl: '/images/song-cover-art/katapot.png'
   },
   {
     title: 'Spotlight',
     type: 'Album',
     link: 'https://open.spotify.com/album/1HvZC18RODcUSqng5Q9KJ9?si=N6DxNBdfQou7MSLOCzdwyQ',
-    imageUrl: '/images/song-cover-art/Untitled design - 15.png'
+    imageUrl: '/images/song-cover-art/spotlight.png'
   },
 ];
 
