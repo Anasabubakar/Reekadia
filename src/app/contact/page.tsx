@@ -91,7 +91,7 @@ const ContactPage = () => {
                     </div>
                     <div className="space-y-2 group/input">
                       <label className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold ml-1 group-focus-within/input:text-primary transition-colors">Message</label>
-                      <textarea className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md resize-none" placeholder="Tell us about your event details, dates, and budget..." rows="5"></textarea>
+                      <textarea className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md resize-none" placeholder="Tell us about your event details, dates, and budget..." rows={5}></textarea>
                     </div>
                     <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
                       <div className="flex gap-5">
