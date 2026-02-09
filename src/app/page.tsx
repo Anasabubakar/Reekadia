@@ -35,7 +35,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#221010]/50 to-[#110505] z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-          style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTs4puAZwAsYPIc7JyVNVaARP5glMrFeMu1cLtHFbUNK0DRzw_bGcRzrHAssrbDfM_jve8jG9h9XqohJRBRwA5WwW7IK_jjvuTXRMC523PjfiROaEGtqKyWB1tjlW6lmPuxEynhCN9rZh9z58-k2NY29J_9wm8g0D3nN3wfU7tFOnccxTbucFIuvwf1EcKaFUmFPNtrRZUE5Nen7Grm-ZTAwmB-4Ovy1LGb-rFBNRN2BAU3uGOQhDzfDIBAoIuo-dbikxoJITRtOg')" }}
+          style={{ backgroundImage: "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')" }}
         ></div>
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-40 animate-pulse"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/30 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
@@ -105,7 +105,7 @@ export default function Home() {
                     <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-1 ring-white/10 animate-spin-slow vinyl-grooves p-[2%]">
                       <div 
                         className="w-full h-full rounded-full bg-cover bg-center border-[8px] border-[#111]" 
-                        style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDimcYaZSlxpyBAMf2ezPooV7SzafvrJ5EEe-XXAQRWdSwz_Sogj52w2dlKHh7jHAbBwJdlLIk_Uidu3kPLqfAIL-4aaCFmTBY2qY1sisp8Xo2uL7QyQOVwyDtLRKWXlFfhJvPTyVyhhxYSwUVvZBMbikAnfiBBCrLs9mFPICYOOJyx3FRPvaEGv8oyYIKR_WfUpPY9VM_ski2RTTj5uYWm_7Lgubchvs_SkTJE9U4qwMn2WwzMlUCzAQyDw3EqG-beiPE1b3d7yrs')" }}
+                        style={{ backgroundImage: "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')" }}
                       ></div>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full border border-gray-700 z-20"></div>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-red-900 to-black rounded-full z-10 flex items-center justify-center">
@@ -127,7 +127,7 @@ export default function Home() {
                       <h4 className="text-white text-5xl md:text-7xl font-black leading-none mb-2 tracking-tighter">The Game <br/><span className="text-primary text-glow">Needs You</span></h4>
                       <p className="text-gray-300 text-lg font-medium tracking-wide flex items-center justify-center lg:justify-start gap-2">
                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        Now Streaming Everywhere
+                        Reekado Banks Sophomore Album is Out Now.
                       </p>
                     </div>
                     <div className="glass-panel-light rounded-2xl p-6 backdrop-blur-md border border-white/5">
@@ -157,15 +157,15 @@ export default function Home() {
                         <div className="w-1.5 bg-white/30 rounded-full h-[50%]"></div>
                       </div>
                       <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="#">
+                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
                           <span className="material-symbols-outlined text-green-500 group-hover/icon:scale-110 transition-transform">wifi_tethering</span>
                           <span className="text-sm font-bold">Spotify</span>
                         </a>
-                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="#">
+                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
                           <span className="material-symbols-outlined text-red-500 group-hover/icon:scale-110 transition-transform">music_note</span>
                           <span className="text-sm font-bold">Apple Music</span>
                         </a>
-                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="#">
+                        <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
                           <span className="material-symbols-outlined text-yellow-500 group-hover/icon:scale-110 transition-transform">play_circle</span>
                           <span className="text-sm font-bold">Audiomack</span>
                         </a>

@@ -6,24 +6,12 @@ import clsx from 'clsx';
 
 const videos = [
   {
-    title: 'Rora',
-    category: 'Music Video',
-    views: '12M Views',
-    duration: '3:45',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBQhbClAClvEMT-ykyAtz7VtGE2dNuAyzrravtfUoCJ3oiLDuvef_UKB-lRtEf-m2Azs4DLU5ciUYWZ_2eMjh2SXVqyYy-31B3ndnl8Qb5hwXDyzcbs0ZW0zX3Bre_y7P2MaTNzlQ-JfXqqISAimbNXo6mBIRGuHVaH6q0pEpojA2ECGVecvjPrVoF5tUS31zWjRzOuhAlWI84Tm6JD-UHBmNr7WeSGUGOJDL96BeZWf9nxueOHCk9OmDIxtWRsi4eLqSjuvJW7mus',
-    alt: 'Rora Music Video',
-    type: 'Music Videos',
-    aspect: 'aspect-[4/3]',
-  },
-  {
     title: 'Lagos Tour Diary: Day 1',
-    category: 'BTS',
+    category: 'Lyrics',
     description: 'Behind the scenes access to the rehearsal sessions and backstage madness.',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBbteW1_MQAZGZdlmcM2VHepO8vsKlHvYSKz5EakvtipWtrWwByvcQW4vDDCzV3HBpqGyI55lyWDC1oGtTdxPpMqnNX6rkLnZ5OzyxU9Uuhr3vQneKElG8483OVK5ZS4tYVyba9U4kyAAtATOPbJV5OUEcNWUMIAy13mWv_FVQs84OA1zqdu8hX6rr_l1cyLAY65oGD-JDGpHZ8Z5d5hEtCjMjYNEM2hUiirRy2VqgJM0fGawKd1G0OGdsoyTp3ofHNyavPQBwX0fU',
+    thumbnail: 'https://img.youtube.com/vi/bLyxCWKbWzk/maxresdefault.jpg',
     alt: 'Tour Diary',
-    type: 'BTS',
+    type: 'Lyrics',
     aspect: 'aspect-[3/4]',
   },
   {
@@ -58,17 +46,44 @@ const videos = [
   },
   {
     title: 'Making of Ozumba Mbadiwe',
-    category: 'BTS',
+    category: 'Vlog',
     description: 'Documentary • 15:20',
     thumbnail:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDmKg5JlvGdYDg6bjdmQGMn2EyLIkOoSVv_y1hOG5blJIgkZ2m7z9gVDLfqb4bkk0nlpfREMAVOC4x19m2vLrL_bRa7QC0OEJaxZweDOHuZBppL7kDUVqcjKy7otVLNLTLwAbOH1cSKeqF2DAcVjli2BgbGG-_kZv21Wl5fcO8Uwlovu3c0MFcqGa6IZego09w3ebyKvJMKz3PvkmKhdz-WjBT_tqcf2MhvWRMf3NdvBG4abwc',
     alt: 'Making of Ozumba',
-    type: 'BTS',
+    type: 'Vlogs',
+    aspect: 'aspect-video',
+  },
+  {
+    title: 'The Game Needs You | The Journey (Part 2)',
+    category: 'Vlog',
+    description: 'The journey behind the album.',
+    thumbnail: 'https://img.youtube.com/vi/bLyxCWKbWzk/maxresdefault.jpg',
+    alt: 'The Game Needs You | The Journey (Part 2)',
+    type: 'Vlogs',
+    aspect: 'aspect-video',
+  },
+  {
+    title: 'Mukutu (Official Video)',
+    category: 'Music Video',
+    views: 'Official Video',
+    thumbnail: 'https://img.youtube.com/vi/la0krkuGOuc/maxresdefault.jpg',
+    alt: 'Mukutu (Official Video)',
+    type: 'Music Videos',
+    aspect: 'aspect-video',
+  },
+  {
+    title: 'Glamorous Ft Mayorkun (Official Video)',
+    category: 'Music Video',
+    views: 'Official Video',
+    thumbnail: 'https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg',
+    alt: 'Glamorous Ft Mayorkun (Official Video)',
+    type: 'Music Videos',
     aspect: 'aspect-video',
   },
 ];
 
-const videoCategories = ['All', 'Music Videos', 'BTS', 'Live'];
+const videoCategories = ['All', 'Music Videos', 'Lyrics', 'Vlogs', 'Live'];
 
 const VideosPage = () => {
   const [activeCategory, setActiveCategory] = React.useState('All');
@@ -94,21 +109,13 @@ const VideosPage = () => {
           {/* Now Playing Section */}
           <section className="w-full max-w-[1024px] flex flex-col items-center gap-8">
             <div className="flex flex-col items-center text-center gap-2">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-primary text-xs md:text-sm font-bold tracking-[0.2em] uppercase animate-pulse"
-              >
-                Now Playing
-              </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400"
               >
-                Ozumba Mbadiwe
+                Music Videos, Lyrics & Vlogs
               </motion.h1>
             </div>
             <motion.div
@@ -121,7 +128,7 @@ const VideosPage = () => {
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDimcYaZSlxpyBAMf2ezPooV7SzafvrJ5EEe-XXAQRWdSwz_Sogj52w2dlKHh7jHAbBwJdlLIk_Uidu3kPLqfAIL-4aaCFmTBY2qY1sisp8Xo2uL7QyQOVwyDtLRKWXlFfhJvPTyVyhhxYSwUVvZBMbikAnfiBBCrLs9mFPICYOOJyx3FRPvaEGv8oyYIKR_WfUpPY9VM_ski2RTTj5uYWm_7Lgubchvs_SkTJE9U4qwMn2WwzMlUCzAQyDw3EqG-beiPE1b3d7yrs')",
+                    "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')",
                 }}
               ></div>
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
@@ -138,7 +145,7 @@ const VideosPage = () => {
                       <span className="text-gray-300 text-xs font-medium">4:12</span>
                     </div>
                     <p className="text-gray-300 text-sm sm:text-base max-w-xl line-clamp-2">
-                      The official music video for "Ozumba Mbadiwe" by Reekado Banks. Directed by DK. A visual masterpiece celebrating the resilience of the Nigerian spirit.
+                      Glamorous Ft Mayorkun (Official Video)
                     </p>
                   </div>
                   <div className="hidden md:flex gap-3">

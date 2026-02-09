@@ -5,22 +5,20 @@ import { motion } from 'framer-motion';
 
 const contactDetails = [
   {
-    title: 'Management',
-    department: 'Reekadia Records',
-    email: 'mgmt@reekadia.com',
-    icon: 'manage_accounts',
+    title: 'Bookings',
+    department: 'Global Events',
+    email: 'management@reekadia.com',
+    icon: 'calendar_month',
+    manager: 'Opeyemi',
+    phone: '+234 903 680 3743'
   },
   {
     title: 'Press',
     department: 'Media & PR',
-    email: 'press@reekadia.com',
+    email: 'management@reekadia.com',
     icon: 'mic_external_on',
-  },
-  {
-    title: 'Bookings',
-    department: 'Global Events',
-    email: 'bookings@reekadia.com',
-    icon: 'calendar_month',
+    manager: 'Opeyemi',
+    phone: '+234 903 680 3743'
   },
 ];
 
@@ -135,8 +133,28 @@ const ContactPage = () => {
                     <span className="font-medium">{detail.email}</span>
                     <span className="material-symbols-outlined text-sm text-primary">arrow_forward</span>
                   </a>
+                  <p className="text-sm text-gray-300 mt-2">{detail.manager}</p>
+                  <p className="text-sm text-gray-300">{detail.phone}</p>
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="glass-panel-light p-8 rounded-[2rem] hover:bg-white/5 transition-all hover:-translate-y-1 duration-300 group border-l-4 border-l-transparent hover:border-l-primary"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
+                        <span className="material-symbols-outlined text-primary">location_on</span>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-white leading-none">Reekadia Record</h3>
+                        <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Headquarters</p>
+                    </div>
+                </div>
+                <p className="text-sm text-gray-300">Victoria Island, Lagos.</p>
+                <p className="text-sm text-gray-300">Nigeria</p>
+              </motion.div>
             </div>
           </motion.div>
         </main>
