@@ -120,10 +120,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <button className="flex cursor-pointer items-center justify-center rounded-full bg-primary hover:bg-red-600 transition-colors h-10 w-10 sm:w-auto sm:px-6 text-white text-sm font-bold shadow-[0_0_15px_rgba(236,19,19,0.4)]">
-            <span className="sm:hidden material-symbols-outlined">mail</span>
-            <span className="hidden sm:block truncate">Subscribe</span>
-          </button>
           {/* Mobile Menu Icon */}
           <button
             className="md:hidden text-white flex items-center justify-center"

@@ -113,41 +113,6 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Reekadia Records Section (Obsidian Card) */}
-            <div className="lg:col-span-12 mt-4">
-              <div className="obsidian-card w-full rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden group">
-                <div className="absolute -right-12 -bottom-24 text-white opacity-[0.03] transform rotate-[-15deg] transition-transform duration-1000 group-hover:rotate-0">
-                  <span className="material-symbols-outlined text-[350px]">graphic_eq</span>
-                </div>
-                <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-                  <div className="flex flex-col gap-6 max-w-2xl text-center md:text-left">
-                    <div className="inline-flex items-center gap-3 justify-center md:justify-start">
-                      <div className="size-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 backdrop-blur-md">
-                        <span className="material-symbols-outlined text-white text-xl">graphic_eq</span>
-                      </div>
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-[0.15em] uppercase">Reekadia Records</h2>
-                    </div>
-                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                      More than a label, Reekadia is a movement. An obsidian monolith in the music industry, dedicated to discovering and polishing the rawest gems of African talent. We are the future of sound.
-                    </p>
-                    <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                      <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Talent Management</span>
-                      <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Music Production</span>
-                      <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Global Distribution</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center justify-center gap-4 shrink-0 mt-8 md:mt-0">
-                    <div className="w-32 h-32 rounded-full border-2 border-white/10 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 to-black shadow-inner">
-                      <span className="material-symbols-outlined text-5xl text-gray-500/50">album</span>
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </div>
-                    <button className="px-6 sm:px-8 py-3 rounded-full bg-white text-black hover:bg-primary hover:text-white transition-all font-bold text-sm tracking-wide uppercase shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_rgba(236,19,19,0.5)]">
-                      Visit Label Site
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </main>
       </div>
