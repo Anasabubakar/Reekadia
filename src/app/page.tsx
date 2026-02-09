@@ -225,7 +225,7 @@ export default function Home() {
                 <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] animate-float-slow" style={{ animationDelay: '2s' }}></div>
                 <div className="relative z-10 flex flex-col items-center gap-6">
                   <span className="material-symbols-outlined text-5xl text-gray-400 font-light">mail</span>
-                  <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">Don't Miss the Vibe</h2>
+                  <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">JOIN THE REEKADICTS</h2>
                   <p className="text-gray-300 max-w-md mx-auto">Sign up for exclusive tour announcements, merch drops, and behind-the-scenes content directly from Reekadia.</p>
                   <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md mt-4">
                     <input className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent backdrop-blur-sm transition-all" placeholder="Enter your email" type="email"/>
