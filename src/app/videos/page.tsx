@@ -101,20 +101,7 @@ const VideosPage = () => {
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   return (
-    <div className="relative min-h-screen w-full bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#110505]/90 via-[#221010]/80 to-[#110505] z-10"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTs4puAZwAsYPIc7JyVNVaARP5glMrFeMu1cLtHFbUNK0DRzw_bGcRzrHAssrbDfM_jve8jG9h9XqohJRBRwA5WwW7IK_jjvuTXRMC523PjfiROaEGtqKyWB1tjlW6lmPuxEynhCN9rZh9z58-k2NY29J_9wm8g0D3nN3wfU7tFOnccxTbucFIuvwf1EcKaFUmFPNtrRZUE5Nen7Grm-ZTAwmB-4Ovy1LGb-rFBNRN2BAU3uGOQhDzfDIBAoIuo-dbikxoJITRtOg')",
-          }}
-        ></div>
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/20 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
-      </div>
+    <div className="relative min-h-screen w-full text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
 
       <div className="relative z-10 flex flex-col h-full min-h-screen">
         <main className="flex-grow flex flex-col items-center px-4 py-8 md:py-12 w-full gap-12 sm:gap-16">

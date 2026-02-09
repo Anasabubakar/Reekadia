@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Background from '@/components/layout/Background';
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: '--font-be-vietnam-pro',
@@ -40,6 +41,9 @@ export default function RootLayout({
       <body
         className={`${beVietnamPro.variable} ${notoSans.variable} antialiased min-h-screen flex flex-col bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white`}
       >
+        import Background from '@/components/layout/Background';
+
+        <Background />
         <Navbar />
         <main className="flex-grow">
           {children}

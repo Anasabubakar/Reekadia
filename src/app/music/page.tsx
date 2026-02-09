@@ -99,13 +99,7 @@ const releases = [
 
 export default function MusicPage() {
   return (
-    <div className="relative min-h-screen w-full bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#221010]/80 to-[#110505] z-10"></div>
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/30 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
-      </div>
+    <div className="relative min-h-screen w-full text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
 
       <div className="relative z-10 flex flex-col h-full min-h-screen">
         <main className="flex-grow flex flex-col items-center justify-start px-4 py-12 md:py-20 w-full">
