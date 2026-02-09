@@ -5,8 +5,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full relative z-20 border-t border-white/10 bg-obsidian-gradient backdrop-blur-xl">
+    <footer className="w-full relative z-20 border-t border-white/10 bg-black/20 backdrop-blur-3xl">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-white/5 opacity-50 pointer-events-none"></div>
       <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
           <div className="flex flex-col items-center md:items-start gap-2">

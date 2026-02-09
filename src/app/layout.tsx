@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${beVietnamPro.variable} ${notoSans.variable} antialiased min-h-screen flex flex-col bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white`}
       >
-        import Background from '@/components/layout/Background';
+
 
         <Background />
         <Navbar />
