@@ -170,6 +170,28 @@ const MerchPage = () => {
           </div>
         </section>
 
+        {/* Secure Payment Information */}
+        <section className="py-12 relative border-t border-white/10 bg-black/20">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h3 className="text-xl font-bold text-white mb-6">Secure Payment</h3>
+            <p className="text-white/80 mb-6">We accept all major payment methods including Paystack, Flutterwave, and Stripe for secure transactions.</p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                <span className="material-symbols-outlined text-primary">verified</span>
+                <span className="text-sm font-medium">Secure Checkout</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                <span className="material-symbols-outlined text-primary">local_shipping</span>
+                <span className="text-sm font-medium">Fast Shipping</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                <span className="material-symbols-outlined text-primary">undo</span>
+                <span className="text-sm font-medium">Easy Returns</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 relative border-t border-white/10">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <span className="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4 block">The Tribe</span>
