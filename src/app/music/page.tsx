@@ -4,95 +4,95 @@ import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 
 const releases = [
-  { 
-    title: 'The Game Needs You', 
-    type: 'Album', 
+  {
+    title: 'The Game Needs You',
+    type: 'Album',
     link: 'https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=MqkOTlZDTUGhD6d6NUrLRA',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 1.png'
   },
-  { 
-    title: 'Glamorous Ft Mayorkun', 
-    type: 'Single', 
+  {
+    title: 'Glamorous Ft Mayorkun',
+    type: 'Single',
     link: 'https://open.spotify.com/album/6FI7fgpszgy8ZZODsis6Pi?si=ndjpq33mQ2SyNxZWLoKGGg',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 2.png'
   },
-  { 
-    title: 'Mukutu', 
-    type: 'Single', 
+  {
+    title: 'Mukutu',
+    type: 'Single',
     link: 'https://open.spotify.com/album/4Q2pEBNlOZAhdIDdtOZI2Z?si=eYk95xgGTcGxXZRMNQgo-Q',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 3.png'
   },
-  { 
-    title: 'Solo', 
-    type: 'Single', 
+  {
+    title: 'Solo',
+    type: 'Single',
     link: 'https://open.spotify.com/album/7wQgtOaa74hP33p7xzkRHO?si=sKpOVXvIQLCc3ue-eB2g6Q',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 4.png'
   },
-  { 
-    title: 'Fakosi Ft Seyi Vibez, DelB', 
-    type: 'Single', 
+  {
+    title: 'Fakosi Ft Seyi Vibez, DelB',
+    type: 'Single',
     link: 'https://open.spotify.com/album/3YPNvgCesJrEaLZgZLXzdt?si=Lz7K2DkvSk6vQ6iG47Aq3Q',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 5.png'
   },
-  { 
-    title: 'Feeling Different Ft Adekunle Gold, Maleek Berry', 
-    type: 'Single', 
+  {
+    title: 'Feeling Different Ft Adekunle Gold, Maleek Berry',
+    type: 'Single',
     link: 'https://open.spotify.com/album/3WkYJGUSNOTvGoe4YkIVjM?si=RKJi7c9KRnyfmjBh99GHhA',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 6.png'
   },
-  { 
-    title: 'Ozumba Mbadiwe', 
-    type: 'Single', 
+  {
+    title: 'Ozumba Mbadiwe',
+    type: 'Single',
     link: 'https://open.spotify.com/album/6oYKhPbYdaaYGGnqZIqlNs?si=lQwAqUwgSK-NLXO5771iKA',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 7.png'
   },
-  { 
-    title: 'OTR VOL. 2 | WHERE DID WE STOP?', 
-    type: 'EP', 
+  {
+    title: 'OTR VOL. 2 | WHERE DID WE STOP?',
+    type: 'EP',
     link: 'https://open.spotify.com/album/6YbuBOhChrDQBd8jeIvhjj?si=7V9fG49HTJGRdhxZHk7NPw',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 8.png'
   },
-  { 
-    title: 'OFF THE RECORD', 
-    type: 'EP', 
+  {
+    title: 'OFF THE RECORD',
+    type: 'EP',
     link: 'https://open.spotify.com/album/2U8mtLvqgQVcrCx4V7H1HJ?si=1MZnyPmGSU-3pUWKT0e5vg',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 9.png'
   },
-  { 
-    title: 'Omolomo Ft Wizkid', 
-    type: 'Single', 
+  {
+    title: 'Omolomo Ft Wizkid',
+    type: 'Single',
     link: 'https://open.spotify.com/album/6EQxI2JlN9WV4hXWCbdhfl?si=jBztS2FtRTuU9AczcIn64A',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 10.png'
   },
-  { 
-    title: 'Rora', 
-    type: 'Single', 
+  {
+    title: 'Rora',
+    type: 'Single',
     link: 'https://open.spotify.com/album/1YoKg4rLeRUTxjs9jyYk3u?si=hEyjEEaARWOXSvBtrV2YKw',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 11.png'
   },
-  { 
-    title: 'Like', 
-    type: 'Single', 
+  {
+    title: 'Like',
+    type: 'Single',
     link: 'https://open.spotify.com/album/38qliUD5SEnqbPbHz8sJlW?si=nIAk3LZXRsKpgPo3GXx5aQ',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 12.png'
   },
-  { 
-    title: 'Easy Jeje', 
-    type: 'Single', 
+  {
+    title: 'Easy Jeje',
+    type: 'Single',
     link: 'https://open.spotify.com/album/2Tc7JXLB2WpKkKegbhrGna?si=4sYlF3LYQAeAKgVzwTEtVg',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 13.png'
   },
-  { 
-    title: 'Katapot', 
-    type: 'Single', 
+  {
+    title: 'Katapot',
+    type: 'Single',
     link: 'https://open.spotify.com/album/1YpcjDbbS3vAnYvm5KT1zab?si=5FJRO6yhR42q3Twb41tQBA',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 14.png'
   },
-  { 
-    title: 'Spotlight', 
-    type: 'Album', 
+  {
+    title: 'Spotlight',
+    type: 'Album',
     link: 'https://open.spotify.com/album/1HvZC18RODcUSqng5Q9KJ9?si=N6DxNBdfQou7MSLOCzdwyQ',
-    imageUrl: 'https://i.scdn.co/image/ab67616d0000b273e0b5f1a3f1b0b0b0b0b0b0b0' // Placeholder
+    imageUrl: '/images/song-cover-art/Untitled design - 15.png'
   },
 ];
 
