@@ -76,14 +76,6 @@ const MerchPage = () => {
             >
               THE REEKADIA<br /><span className="text-stroke text-glow text-white">COLLECTION</span>
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white/70 text-base md:text-lg max-w-xl font-light leading-relaxed"
-            >
-              Official merchandise featuring the new Liquid Glass aesthetic. <br className="hidden md:block" />Premium materials meeting futuristic design.
-            </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
