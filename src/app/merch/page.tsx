@@ -127,11 +127,6 @@ const MerchPage = () => {
                       style={{ backgroundImage: `url('${product.imageUrl}')` }}
                       aria-label={product.alt}
                     ></div>
-                    {product.tag && (
-                      <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                        {product.tag}
-                      </div>
-                    )}
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <button className="size-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                         <span className="material-symbols-outlined text-[20px]">favorite</span>
