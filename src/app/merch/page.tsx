@@ -56,7 +56,7 @@ const products = [
 
 const MerchPage = () => {
   return (
-    <div className="bg-background-dark text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+    <div className="text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
       <div className="w-full bg-black/40 backdrop-blur-sm border-b border-white/5 py-2 px-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-[10px] uppercase tracking-widest text-white/50 z-50 relative">
         <span>Secure Checkout via</span>
         <div className="flex items-center gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
@@ -70,13 +70,6 @@ const MerchPage = () => {
 
       <main className="flex flex-col min-h-screen">
         <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-          <div
-            className="absolute inset-0 z-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrIbv1Q_4vW4GVgsRP3o_7I2s4DsBt0EFprN5E2qHJRlfrFIcQOYxVZOWyRC5i3HRBiFlALYyJDdp3DO4q54p3-G-QuxyDVcV9syZDBW6I3DIqciQDboau7FNey1kisglCW6zr9rQ-Un8BpGcY5T8bKZCmiDgoBhV-Ehef8Hj8tDE90nI26XR6WzVz4GmpcjR98MM0O4f-MmmcFUIOWM-V8buR3Xrs9_D43ePi6OhWlqfm11-PHOIUwRP-NrZ6JZdi9JAmfB0qsHc')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark/40 to-background-dark z-0"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -117,7 +110,7 @@ const MerchPage = () => {
           </div>
         </section>
 
-        <section className="w-full px-4 sm:px-8 py-20 bg-background-dark relative">
+        <section className="w-full px-4 sm:px-8 py-20 relative">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
           <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[128px] opacity-30 pointer-events-none"></div>
           <div className="absolute bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] opacity-20 pointer-events-none"></div>
@@ -192,7 +185,7 @@ const MerchPage = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-black relative border-t border-white/10">
+        <section className="py-20 relative border-t border-white/10">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <span className="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4 block">The Tribe</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">DON'T MISS THE DROP</h2>

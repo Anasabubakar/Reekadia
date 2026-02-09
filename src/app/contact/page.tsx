@@ -30,20 +30,7 @@ const socialLinks = [
 
 const ContactPage = () => {
   return (
-    <div className="relative min-h-screen w-full bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#221010]/70 to-[#110505] z-10"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
-          style={{
-            backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTs4puAZwAsYPIc7JyVNVaARP5glMrFeMu1cLtHFbUNK0DRzw_bGcRzrHAssrbDfM_jve8jG9h9XqohJRBRwA5WwW7IK_jjvuTXRMC523PjfiROaEGtqKyWB1tjlW6lmPuxEynhCN9rZh9z58-k2NY29J_9wm8g0D3nN3wfU7tFOnccxTbucFIuvwf1EcKaFUmFPNtrRZUE5Nen7Grm-ZTAwmB-4Ovy1LGb-rFBNRN2BAU3uGOQhDzfDIBAoIuo-dbikxoJITRtOg')",
-            filter: 'hue-rotate(320deg) brightness(0.7)',
-          }}
-        ></div>
-        <div className="absolute top-[10%] left-[20%] w-[60vw] h-[60vw] bg-primary/10 rounded-full blur-[150px] mix-blend-screen opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-red-900/20 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
-      </div>
+    <div className="relative min-h-screen w-full text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
 
       <div className="relative z-10 flex flex-col h-full min-h-screen">
         <main className="flex-grow flex flex-col items-center justify-center px-4 py-12 w-full">
@@ -66,11 +53,11 @@ const ContactPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2 group/input">
                         <label className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold ml-1 group-focus-within/input:text-primary transition-colors">Name</label>
-                        <input className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md" placeholder="Enter your full name" type="text"/>
+                        <input className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md" placeholder="Enter your full name" type="text" />
                       </div>
                       <div className="space-y-2 group/input">
                         <label className="text-xs uppercase tracking-[0.2em] text-primary/80 font-bold ml-1 group-focus-within/input:text-primary transition-colors">Email</label>
-                        <input className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md" placeholder="name@company.com" type="email"/>
+                        <input className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md" placeholder="name@company.com" type="email" />
                       </div>
                     </div>
                     <div className="space-y-2 group/input">
@@ -94,9 +81,9 @@ const ContactPage = () => {
                     <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
                       <div className="flex gap-5">
                         {socialLinks.map((link) => (
-                           <a key={link.icon} className="glass-sphere size-12 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer group/icon" href={link.href}>
-                             <span className="material-symbols-outlined group-hover/icon:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">{link.icon}</span>
-                           </a>
+                          <a key={link.icon} className="glass-sphere size-12 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer group/icon" href={link.href}>
+                            <span className="material-symbols-outlined group-hover/icon:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">{link.icon}</span>
+                          </a>
                         ))}
                       </div>
                       <button className="w-full md:w-auto relative overflow-hidden bg-primary hover:bg-red-600 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full shadow-[0_0_20px_rgba(236,19,19,0.4)] transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(236,19,19,0.6)]" type="button">
@@ -144,13 +131,13 @@ const ContactPage = () => {
                 className="glass-panel-light p-8 rounded-[2rem] hover:bg-white/5 transition-all hover:-translate-y-1 duration-300 group border-l-4 border-l-transparent hover:border-l-primary"
               >
                 <div className="flex items-center gap-4 mb-4">
-                    <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
-                        <span className="material-symbols-outlined text-primary">location_on</span>
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-white leading-none">Reekadia Record</h3>
-                        <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Headquarters</p>
-                    </div>
+                  <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
+                    <span className="material-symbols-outlined text-primary">location_on</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white leading-none">Reekadia Record</h3>
+                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Headquarters</p>
+                  </div>
                 </div>
                 <p className="text-sm text-gray-300">Victoria Island, Lagos.</p>
                 <p className="text-sm text-gray-300">Nigeria</p>

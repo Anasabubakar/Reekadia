@@ -43,10 +43,8 @@ const tourDates = [
 
 const TourPage = () => {
   return (
-    <div className="bg-background-dark font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+    <div className="font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
       <main className="flex-1 flex flex-col w-full relative pt-20">
-        <div className="fixed top-0 left-0 w-full h-[800px] bg-gradient-to-b from-primary/10 via-transparent to-transparent pointer-events-none z-0"></div>
-        <div className="fixed top-1/2 right-[-20%] w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none z-0"></div>
 
         <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-10 lg:py-16 flex justify-center">
           <div className="w-full max-w-[1024px] rounded-2xl overflow-hidden relative group">
@@ -139,25 +137,25 @@ const TourPage = () => {
         </section>
 
         <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 pb-20 flex justify-center">
-            <div className="w-full max-w-[960px] glass-bubble rounded-[3rem] p-6 sm:p-8 md:p-16 relative overflow-hidden group">
-                <div className="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-colors duration-1000"></div>
-                <div className="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
-                <div className="relative z-10 flex flex-col items-center text-center gap-6">
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 mb-2">
-                        <span className="material-symbols-outlined text-white text-3xl">mail</span>
-                    </div>
-                    <div className="space-y-2 max-w-2xl">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">JOIN THE REEKADICTS</h2>
-                        <p className="text-white/70 text-base sm:text-lg">Join the Reekadia mailing list for exclusive presale codes, liquid merch drops, and tour alerts.</p>
-                    </div>
-                    <form className="w-full max-w-md mt-4 flex flex-col sm:flex-row gap-3">
-                        <input className="flex-1 h-14 px-6 rounded-full bg-[#221010]/50 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary backdrop-blur-sm transition-all" placeholder="Enter your email address" type="email"/>
-                        <button className="h-14 px-8 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-red-600 hover:shadow-[0_0_20px_rgba(236,19,19,0.5)] transition-all whitespace-nowrap">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
+          <div className="w-full max-w-[960px] glass-bubble rounded-[3rem] p-6 sm:p-8 md:p-16 relative overflow-hidden group">
+            <div className="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-colors duration-1000"></div>
+            <div className="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
+            <div className="relative z-10 flex flex-col items-center text-center gap-6">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 mb-2">
+                <span className="material-symbols-outlined text-white text-3xl">mail</span>
+              </div>
+              <div className="space-y-2 max-w-2xl">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">JOIN THE REEKADICTS</h2>
+                <p className="text-white/70 text-base sm:text-lg">Join the Reekadia mailing list for exclusive presale codes, liquid merch drops, and tour alerts.</p>
+              </div>
+              <form className="w-full max-w-md mt-4 flex flex-col sm:flex-row gap-3">
+                <input className="flex-1 h-14 px-6 rounded-full bg-[#221010]/50 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary backdrop-blur-sm transition-all" placeholder="Enter your email address" type="email" />
+                <button className="h-14 px-8 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-red-600 hover:shadow-[0_0_20px_rgba(236,19,19,0.5)] transition-all whitespace-nowrap">
+                  Subscribe
+                </button>
+              </form>
             </div>
+          </div>
         </section>
       </main>
     </div>
