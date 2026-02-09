@@ -4,7 +4,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
-const videos = [
+interface Video {
+  title: string;
+  category: string;
+  description?: string;
+  thumbnail: string;
+  alt: string;
+  type: string;
+  aspect?: string;
+  views?: string;
+  duration?: string;
+}
+
+const videos: Video[] = [
   {
     title: 'Lagos Tour Diary: Day 1',
     category: 'Lyrics',

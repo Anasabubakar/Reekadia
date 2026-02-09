@@ -1,18 +1,18 @@
 'use client';
 
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
 
 export default function Home() {
   const featuredRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: featuredRef,
     offset: ["start end", "center center"]
   });
 
   const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
-  
+
   const rawScale = useTransform(scrollYProgress, [0, 0.8, 1], [0.7, 0.9, 1]);
   const rawOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.8, 1]);
   const rawY = useTransform(scrollYProgress, [0, 1], [150, 0]);
@@ -28,15 +28,43 @@ export default function Home() {
   const contentX = useSpring(useTransform(scrollYProgress, [0, 1], [50, 0]), springConfig);
   const contentOpacity = useSpring(useTransform(scrollYProgress, [0.4, 1], [0, 1]), springConfig);
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const heroImages = [
+    '/images/hero/Untitled design - 1.png',
+    '/images/hero/Untitled design - 2.png',
+    '/images/hero/Untitled design - 3.png',
+    '/images/hero/Untitled design - 4.png',
+    '/images/hero/Untitled design - 5.png',
+    '/images/hero/Untitled design - 6.png',
+    '/images/hero/Untitled design - 7.png',
+    '/images/hero/Untitled design - 8.png',
+    '/images/hero/Untitled design - 9.png',
+    '/images/hero/Untitled design - 10.png',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-      {/* Background Video Simulation */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#221010]/50 to-[#110505] z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-          style={{ backgroundImage: "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')" }}
-        ></div>
+      {/* Background Video/Image Simulation */}
+      <div className="fixed inset-0 z-0 pointer-events-none bg-[#110505]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+            style={{ backgroundImage: `url('${heroImages[currentImageIndex]}')` }}
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#221010]/60 to-[#110505] z-10"></div>
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-40 animate-pulse"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/30 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
       </div>
@@ -45,7 +73,7 @@ export default function Home() {
         <main className="flex-grow w-full flex flex-col items-center">
           {/* Hero Section */}
           <section className="min-h-[85vh] w-full flex flex-col items-center justify-center px-4 relative">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -54,7 +82,7 @@ export default function Home() {
               <div className="flex flex-col gap-2">
                 <h2 className="text-primary text-sm md:text-base font-bold tracking-[0.2em] uppercase">The Official Home of Reekado Banks</h2>
                 <h1 className="text-white text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-tighter text-glow drop-shadow-2xl">
-                  Gbedu wey dey <br className="hidden md:block"/>
+                  Gbedu wey dey <br className="hidden md:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">burst brain</span>
                 </h1>
               </div>
@@ -79,7 +107,7 @@ export default function Home() {
           {/* Featured Release Section */}
           <section ref={featuredRef} className="w-full py-20 px-4 relative z-20 perspective-[1000px]">
             <div className="max-w-[1100px] mx-auto w-full">
-              <motion.div 
+              <motion.div
                 style={{ opacity, y }}
                 className="flex items-center gap-3 mb-8 px-2"
               >
@@ -88,23 +116,23 @@ export default function Home() {
                 <h3 className="text-white text-lg font-bold tracking-[0.2em] uppercase">Featured Release</h3>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 style={{ scale, opacity, y, rotateX }}
                 className="glass-panel p-8 md:p-12 rounded-[3rem] relative overflow-hidden group border-t border-white/20 shadow-2xl"
               >
                 <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                  <motion.div 
-                    style={{ 
+                  <motion.div
+                    style={{
                       scale: vinylScale,
                       rotate: vinylRotate
                     }}
                     className="relative w-full aspect-square max-w-[400px] mx-auto lg:mx-0 flex items-center justify-center"
                   >
                     <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-1 ring-white/10 animate-spin-slow vinyl-grooves p-[2%]">
-                      <div 
-                        className="w-full h-full rounded-full bg-cover bg-center border-[8px] border-[#111]" 
+                      <div
+                        className="w-full h-full rounded-full bg-cover bg-center border-[8px] border-[#111]"
                         style={{ backgroundImage: "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')" }}
                       ></div>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full border border-gray-700 z-20"></div>
@@ -116,15 +144,15 @@ export default function Home() {
                       <span className="material-symbols-outlined text-5xl ml-1">play_arrow</span>
                     </button>
                   </motion.div>
-                  <motion.div 
-                    style={{ 
+                  <motion.div
+                    style={{
                       x: contentX,
                       opacity: contentOpacity
                     }}
                     className="flex flex-col gap-8 text-center lg:text-left"
                   >
                     <div>
-                      <h4 className="text-white text-5xl md:text-7xl font-black leading-none mb-2 tracking-tighter">The Game <br/><span className="text-primary text-glow">Needs You</span></h4>
+                      <h4 className="text-white text-5xl md:text-7xl font-black leading-none mb-2 tracking-tighter">The Game <br /><span className="text-primary text-glow">Needs You</span></h4>
                       <p className="text-gray-300 text-lg font-medium tracking-wide flex items-center justify-center lg:justify-start gap-2">
                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                         Reekado Banks Sophomore Album is Out Now.
@@ -228,7 +256,7 @@ export default function Home() {
                   <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">JOIN THE REEKADICTS</h2>
                   <p className="text-gray-300 max-w-md mx-auto">Sign up for exclusive tour announcements, merch drops, and behind-the-scenes content directly from Reekadia.</p>
                   <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md mt-4">
-                    <input className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent backdrop-blur-sm transition-all" placeholder="Enter your email" type="email"/>
+                    <input className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent backdrop-blur-sm transition-all" placeholder="Enter your email" type="email" />
                     <button className="px-8 py-4 rounded-full bg-gradient-to-r from-gray-100 to-gray-300 text-black font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] transform hover:scale-105 transition-all" type="button">
                       Subscribe
                     </button>

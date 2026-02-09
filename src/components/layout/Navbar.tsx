@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -47,9 +48,16 @@ export default function Navbar() {
           scrolled && 'bg-black/70'
         )}
       >
+        {/* ... inside the component */}
         <Link href="/" className="flex items-center gap-2 sm:gap-4 text-white group">
-          <div className="size-8 text-primary flex items-center justify-center">
-            <span className="material-symbols-outlined text-[32px]">graphic_eq</span>
+          <div className="relative size-10 md:size-12 flex items-center justify-center">
+            <Image
+              src="/images/logo/reekadia-transparent.png"
+              alt="Reekadia Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
           <h2 className="text-white text-xl font-bold tracking-tight uppercase hidden sm:block">Reekadia</h2>
         </Link>
