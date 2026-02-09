@@ -100,12 +100,6 @@ const releases = [
     link: 'https://open.spotify.com/album/1HvZC18RODcUSqng5Q9KJ9?si=N6DxNBdfQou7MSLOCzdwyQ',
     imageUrl: '/images/song-cover-art/spotlight.png'
   },
-  {
-    title: 'Reekadia Portrait',
-    type: 'Single',
-    link: '#', // Placeholder link - replace with actual link if available
-    imageUrl: '/images/song-cover-art/reekadia-portrait.png'
-  },
 ];
 
 
