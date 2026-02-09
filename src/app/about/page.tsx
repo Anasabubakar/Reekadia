@@ -45,7 +45,7 @@ const AboutPage = () => {
                   className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
                   style={{
                     backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTs4puAZwAsYPIc7JyVNVaARP5glMrFeMu1cLtHFbUNK0DRzw_bGcRzrHAssrbDfM_jve8jG9h9XqohJRBRwA5WwW7IK_jjvuTXRMC523PjfiROaEGtqKyWB1tjlW6lmPuxEynhCN9rZh9z58-k2NY29J_9wm8g0D3nN3wfU7tFOnccxTbucFIuvwf1EcKaFUmFPNtrRZUE5Nen7Grm-ZTAwmB-4Ovy1LGb-rFBNRN2BAU3uGOQhDzfDIBAoIuo-dbikxoJITRtOg')",
+                      "url('/images/song-cover-art/reekadia-portrait.png')",
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
