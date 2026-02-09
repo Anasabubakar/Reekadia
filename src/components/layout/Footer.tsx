@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
               <h2 className="text-2xl font-bold tracking-tight text-white uppercase">Reekadia</h2>
             </div>
-            <p className="text-gray-500 text-sm">Official Artist Platform</p>
+            <p className="text-gray-500 text-sm">Official website of Reekado Banks and Reekadia Records. The home of authentic Afrobeats music.</p>
           </div>
 
           <div className="flex gap-8 text-sm font-medium text-gray-400">

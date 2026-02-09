@@ -19,7 +19,7 @@ const notoSans = Noto_Sans({
 
 export const metadata: Metadata = {
   title: 'Reekadia - Official Home',
-  description: 'The official home of Reekado Banks & Reekadia Records.',
+  description: 'Official website of Reekado Banks and Reekadia Records. The home of authentic Afrobeats music.',
   icons: {
     icon: '/favicon.ico',
   },
