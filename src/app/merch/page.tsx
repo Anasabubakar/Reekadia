@@ -5,52 +5,40 @@ import { motion } from 'framer-motion';
 
 const products = [
   {
-    name: 'Reekadia Logo Tee',
+    name: 'Reekadia Logo T-Shirt',
     category: 'Unisex / Cotton',
-    price: '₦15,000',
+    price: '$25 USD',
     imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBjAW09YqgZilWEiwp7rv0B8WyVMByz0Kj-4_SU7MEAxEArbwuSEQ8v8VVrL0TDUvhdxIAZRo859p-609wceJvAmTy8byWQ_ddE3LgAJGtEmDE7HEY_2U0miotLq46sJMJ8hpfk9OPS4oFoTXlCWxJBYBbpa8mPc9ehQRJ9Liel0DgvIIsp_dlkx71d4YUjED02zPKZJIEc0F4iqnFukHxowm1Aiwli32rkL2genYc6Si5z1nFUmaka9POGDzkILqZpwYVWVm90hcE',
     alt: 'Black t-shirt with Reekadia logo floating in glass block',
-    tag: null,
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Premium cotton t-shirt with official Reekadia logo'
   },
   {
     name: 'Banks Music Hoodie',
     category: 'Oversized / Heavyweight',
-    price: '₦25,000',
+    price: '$45 USD',
     imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAP9gpNpSKWK0fkv7l2C9HbAVw-HDvCgDqPAuzp4wEt4t9i2o7VP7thzWzd1MZjHvskihQJ9AFwCs6J_K-HNgd8vIDiKDS_PQkexH612qvPbZIh8pw_Ajc1YmVIVz9bIe8hx-XMNZ5cJTp0-CmuZAANegRQmjA7DpeoW-W9TZLywcJcaxTd1rU7Ot-Nb2B6TKCXgE3KC0mFelJAzMp9xOHZMvVhBSmUTMYbQD9iggVIKQ5LLJ3_kWCrFCbaSpKniJjCzgUBcfBt_Qw',
     alt: 'Black hoodie with graphic print floating in glass block',
-    tag: 'Best Seller',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    description: 'Comfortable hoodie with Banks Music branding'
   },
   {
-    name: 'Vol. 1 Vinyl LP',
-    category: 'Limited Edition',
-    price: '₦20,000',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuApiCxX0BuUfHW_PDF6I71u9KKIkNgH1QRHZxTXYMYAODL0dRKn5w_OQPwydPNeFr_200PAMtb-3pZgL1j3ikmUmnjdEqsqdxTiR1Fos8m3rXBfsqk-Sfuo1SJSE4fPRzs1exUPPFJCmWgF9vMuaJCG9bjKcGQORP8ov1lWkhCgHRLod3C2YcWkGFpmPcRGFligFA--6yFFzt8XIz0A_AaBX2zFLr_x1Hn73jq4jsTTkAp-49DlkoR84BXdHW6fJFEWQvtutL6FZvs',
-    alt: 'Vinyl record in sleeve floating in glass block',
-    tag: null,
-  },
-  {
-    name: 'Reekadia Dad Cap',
-    category: 'One Size',
-    price: '₦10,000',
+    name: 'Reekado Banks Cap',
+    category: 'Adjustable',
+    price: '$20 USD',
     imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCE2u-ApeU0XQ-yYQREKLwhMsBeFCPANWYyaLf-i08kYZy2Vun5DaT_pw1tTd9G3eiGVTsIqCsM2y5ZMITt3ObtH-X1csQeCHI16Hn_Gf971v1KS9FDaG5NjSvAEdiPN7IsUvkcMSkZHZ333h3U65b0omJS_PeTOumSMaStAuQrJTYLt2SMh0SkC-KnbXe97yGvSqG6aXmO19T4hUvZeuYErU6mSqEquJFfrIoa4u_7N-sxM7vk9B9yI0pfM7bhx39za8Zq82VYdis',
     alt: 'Black cap with embroidery floating in glass block',
-    tag: null,
+    sizes: ['One Size'],
+    description: 'Adjustable cap with embroidered logo'
   },
   {
-    name: 'Tour Tote Bag',
-    category: 'Canvas',
-    price: '₦8,000',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAON9JeYQ8SgPJsfHZYhFmUCUoX5qv2YKAWHOe7iqoWBMr06DiH3Um5C5UUDnMWmOLQbekz_dw_-VNGXy70Wpn_YZuoTw1VW2jrD4RojsL_4nF-U0nFAt5uWIOFYHt8yn_qqB-vQSxcNSvQexwGgPN18I-YXofAh8nSlPjYlW202UXVZP_W-nveDfaDXYIgRk-licRZ5z6ZjCudnySpVqI24em2p-dfCeQs0XvCzQd5og6uW70XjMszW-2qv5VLW4SYFYrGQnh5C8c',
-    alt: 'Tote bag with print floating in glass block',
-    tag: null,
-  },
-  {
-    name: 'Liquid Bottle',
-    category: 'Stainless Steel',
-    price: '₦12,000',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbSMH1EQF0XLddPqH1eprZO7q-_2bQADefujDWs6-fUGMbrWGK2Z5KkVByI00FuaoQVCd6_Xyvs9k9Z8W8PeHxrUXrm_xeigXYqwS8Wh2ZlL-LUMgyBCszGcq94bct12TvknPb0-JM89j76tIZe6ygNWQzDoHE4xM0SDzap4Oq5m0znjdV-VZxLw05qLF_0HPKCYD1JjfcKvf4d1FmuZtVWzLAnBehnjFxAixxfarz8mDbAk67PROGbbAVgvGb863GVRVdEoJ9oXA',
-    alt: 'Water bottle metallic floating in glass block',
-    tag: null,
+    name: 'Limited Edition Poster',
+    category: 'Print',
+    price: '$15 USD',
+    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDmKg5JlvGdYDg6bjdmQGMn2EyLIkOoSVv_y1hOG5blJIgkZ2m7z9gVDLfqb4bkk0nlpfREMAVOC4x19m2vLrL_bRa7QC0OEJaxZweDOHuZBppL7kDUVqcjKy7otVLNLTLwAbOH1cSKeqF2DAcVjli2BgbGG-_kZv21Wl5fcO8Uwlovu3c0MFcqGa6IZego09w3ebyKvJMKz3PvkmKhdz-WjBT_tqcf2MhvWRMf3NdvBG4abwc',
+    alt: 'High-quality print poster',
+    sizes: ['18"x24"', '24"x36"'],
+    description: 'High-quality print poster, limited edition'
   },
 ];
 
@@ -159,16 +147,26 @@ const MerchPage = () => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-3 px-2 pb-2">
-                    <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-white text-lg font-bold leading-tight">{product.name}</h3>
+                      <p className="text-white/40 text-xs mt-1 uppercase tracking-wider">{product.category}</p>
+                      <p className="text-white/60 text-xs mt-1">{product.description}</p>
+                    </div>
+                    <div className="flex justify-between items-center">
                       <div>
-                        <h3 className="text-white text-lg font-bold leading-tight">{product.name}</h3>
-                        <p className="text-white/40 text-xs mt-1 uppercase tracking-wider">{product.category}</p>
-                      </div>
-                      <div className="text-right">
                         <p className="text-white font-bold text-lg">{product.price}</p>
                       </div>
+                      <div className="relative">
+                        <select className="bg-white/10 border border-white/20 rounded-full py-1.5 px-3 text-xs text-white focus:outline-none focus:ring-1 focus:ring-primary appearance-none pr-6">
+                          <option value="">Select Size</option>
+                          {product.sizes.map((size, idx) => (
+                            <option key={idx} value={size}>{size}</option>
+                          ))}
+                        </select>
+                        <span className="absolute right-2 top-1/2 transform -translate-y-1/2 material-symbols-outlined text-xs pointer-events-none">expand_more</span>
+                      </div>
                     </div>
-                    <button className="w-full h-12 mt-2 rounded-full bg-white/5 hover:bg-primary border border-white/10 hover:border-primary text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_15px_rgba(236,19,19,0.3)]">
+                    <button className="w-full h-12 rounded-full bg-white/5 hover:bg-primary border border-white/10 hover:border-primary text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_15px_rgba(236,19,19,0.3)]">
                       <span className="material-symbols-outlined text-[18px]">add_shopping_cart</span>
                       Add to Cart
                     </button>
@@ -177,11 +175,6 @@ const MerchPage = () => {
               ))}
             </div>
 
-            <div className="w-full flex justify-center mt-20">
-              <button className="px-8 py-3 rounded-full border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-                Load More Products
-              </button>
-            </div>
           </div>
         </section>
 

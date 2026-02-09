@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 
 const contactDetails = [
   {
-    title: 'Bookings',
-    department: 'Global Events',
+    title: 'Booking Information',
+    department: 'Shows, Appearances & Performance Bookings',
     email: 'management@reekadia.com',
     icon: 'calendar_month',
     manager: 'Opeyemi',
     phone: '+234 903 680 3743'
   },
   {
-    title: 'Press',
-    department: 'Media & PR',
+    title: 'Press & Media Contact',
+    department: 'Interviews & Media Requests',
     email: 'management@reekadia.com',
     icon: 'mic_external_on',
     manager: 'Opeyemi',
@@ -135,12 +135,36 @@ const ContactPage = () => {
                     <span className="material-symbols-outlined text-primary">location_on</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white leading-none">Reekadia Record</h3>
-                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Headquarters</p>
+                    <h3 className="text-xl font-bold text-white leading-none">Office Location</h3>
+                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Reekadia Records</p>
                   </div>
                 </div>
-                <p className="text-sm text-gray-300">Victoria Island, Lagos.</p>
+                <p className="text-sm text-gray-300">Victoria Island, Lagos</p>
                 <p className="text-sm text-gray-300">Nigeria</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="glass-panel-light p-8 rounded-[2rem] hover:bg-white/5 transition-all hover:-translate-y-1 duration-300 group border-l-4 border-l-transparent hover:border-l-primary"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
+                    <span className="material-symbols-outlined text-primary">share</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white leading-none">Follow Reekado Banks</h3>
+                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Stay Connected</p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-300 mb-4">Stay connected for the latest updates, music, and behind-the-scenes content</p>
+                <div className="flex gap-3">
+                  <a href="#" className="size-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">IG</a>
+                  <a href="#" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">X</a>
+                  <a href="#" className="size-10 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">YT</a>
+                  <a href="#" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">TK</a>
+                </div>
               </motion.div>
             </div>
           </motion.div>
