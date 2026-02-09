@@ -40,6 +40,7 @@ export default function Home() {
             className="flex flex-col items-center text-center gap-8 animate-float max-w-4xl mx-auto"
           >
             <div className="flex flex-col gap-2">
+              <h2 className="text-primary text-sm md:text-base font-bold tracking-[0.2em] uppercase">Reekado Banks</h2>
               <h1 className="text-white text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-tighter text-glow drop-shadow-2xl">
                 Gbedu wey dey <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">burst brain</span>
