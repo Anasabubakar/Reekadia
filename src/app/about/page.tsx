@@ -13,21 +13,75 @@ const careerMilestones = [
   },
   {
     year: '2015',
-    title: "Headies 'Next Rated'",
+    title: "Won the coveted Next Rated award at The Headies",
     description: 'The defining moment that cemented his status as the future of Afrobeats. A highly contested victory that sparked conversations worldwide.',
     highlight: true,
   },
   {
+    year: '2015',
+    title: "Named Most Promising Act at the City People Entertainment Awards",
+    description: 'Recognition of his rising star status in the entertainment industry.',
+    highlight: false,
+  },
+  {
+    year: '2015',
+    title: "Earned Best New Act at the MTV Africa Music Awards (MAMAs)",
+    description: 'International recognition of his talent and potential.',
+    highlight: false,
+  },
+  {
     year: '2016',
-    title: 'Spotlight Album',
-    description: "Debut album hitting #10 on Billboard World Albums chart, featuring smash hits like 'Ladies and Gentlemen'.",
+    title: 'Released debut album Spotlight',
+    description: "The album debuted at #10 on Billboard World Albums chart and later won Best Album of the Year at The Headies.",
+    highlight: true,
+  },
+  {
+    year: '2017',
+    title: "Crowned Revelation of the Year at The Headies",
+    description: 'Further solidifying his position as a leading voice in Afrobeats.',
     highlight: false,
   },
   {
     year: '2018',
-    title: 'Establishment of Banks Music',
+    title: "Won Hip-Hop World Revelation of the Year at The Headies",
     description: 'Transitioning from artist to mogul, laying the groundwork for what would become Reekadia Records.',
     highlight: false,
+  },
+  {
+    year: '2019',
+    title: "Opening for Wizkid at the O2",
+    description: 'A major milestone performing alongside one of Afrobeats biggest stars.',
+    highlight: false,
+  },
+  {
+    year: '2020',
+    title: "Headline a show in London",
+    description: 'Establishing his solo presence on the international stage.',
+    highlight: false,
+  },
+  {
+    year: '2022',
+    title: "Opening for Davido at the O2",
+    description: 'Continuing to share stages with Afrobeats royalty.',
+    highlight: false,
+  },
+  {
+    year: '2025',
+    title: "Launched his record label REEKADIA",
+    description: 'Transitioned into a new phase of independence, taking control of his artistic destiny.',
+    highlight: true,
+  },
+  {
+    year: '2025',
+    title: "Released sophomore album The Game Needs You",
+    description: 'A statement project reflecting his artistry, growth, and global vision.',
+    highlight: true,
+  },
+  {
+    year: '2025',
+    title: "The Game Needs You Tour",
+    description: 'Headlining a massive show in Abuja where he shut down the city with an unforgettable performance, before taking the energy worldwide to Canada and the United Kingdom.',
+    highlight: true,
   },
 ];
 
@@ -112,6 +166,68 @@ const AboutPage = () => {
                     </div>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+
+            {/* Awards & Recognition Section */}
+            <div className="lg:col-span-12 mt-12">
+              <div className="glass-panel rounded-[2rem] p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="material-symbols-outlined text-primary text-3xl">star</span>
+                  <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-widest text-white">Awards & Recognition</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-primary mb-3 uppercase tracking-wider">Headies Awards</h3>
+                    <ul className="space-y-2 text-gray-300 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Multiple nominations including Next Rated and Best Pop Single</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Won Next Rated (2015)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Won Revelation of the Year (2017)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Won Hip-Hop World Revelation of the Year (2018)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Album Spotlight won Best Album of the Year</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-primary mb-3 uppercase tracking-wider">Other Recognitions</h3>
+                    <ul className="space-y-2 text-gray-300 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Nigeria Entertainment Awards: Hottest Single of the Year nomination</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>City People Awards: Music Artist of the Year nomination</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>MTV Africa Music Awards (MAMAs): Best New Act (2015)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>City People Entertainment Awards: Most Promising Act (2015)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>International Recognition: Featured on major international playlists and platforms</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
