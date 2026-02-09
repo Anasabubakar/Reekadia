@@ -82,15 +82,15 @@ const MerchPage = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex gap-4 mt-4"
             >
-              <button className="flex items-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-red-600 text-white text-sm font-bold tracking-wide uppercase transition-all shadow-[0_0_20px_rgba(236,19,19,0.4)] hover:shadow-[0_0_30px_rgba(236,19,19,0.6)]">
+              <a href="#products-section" className="flex items-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-red-600 text-white text-sm font-bold tracking-wide uppercase transition-all shadow-[0_0_20px_rgba(236,19,19,0.4)] hover:shadow-[0_0_30px_rgba(236,19,19,0.6)] block">
                 Shop Now
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-              </button>
+              </a>
             </motion.div>
           </div>
         </section>
 
-        <section className="w-full px-4 sm:px-8 py-20 relative">
+        <section id="products-section" className="w-full px-4 sm:px-8 py-20 relative">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
           <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[128px] opacity-30 pointer-events-none"></div>
           <div className="absolute bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] opacity-20 pointer-events-none"></div>

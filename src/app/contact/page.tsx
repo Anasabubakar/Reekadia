@@ -23,9 +23,9 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { icon: 'photo_camera', href: '#' },
-  { icon: 'alternate_email', href: '#' },
-  { icon: 'play_arrow', href: '#' },
+  { icon: 'photo_camera', href: 'https://instagram.com/reekadobanks' },
+  { icon: 'alternate_email', href: 'https://twitter.com/reekadobanks' },
+  { icon: 'play_arrow', href: 'https://youtube.com/reekadobanks' },
 ];
 
 const ContactPage = () => {
@@ -160,10 +160,10 @@ const ContactPage = () => {
                 </div>
                 <p className="text-sm text-gray-300 mb-4">Stay connected for the latest updates, music, and behind-the-scenes content</p>
                 <div className="flex gap-3">
-                  <a href="#" className="size-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">IG</a>
-                  <a href="#" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">X</a>
-                  <a href="#" className="size-10 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">YT</a>
-                  <a href="#" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">TK</a>
+                  <a href="https://instagram.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">IG</a>
+                  <a href="https://twitter.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">X</a>
+                  <a href="https://youtube.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">YT</a>
+                  <a href="https://tiktok.com/@reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">TK</a>
                 </div>
               </motion.div>
             </div>

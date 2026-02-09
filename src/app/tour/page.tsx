@@ -70,10 +70,10 @@ const TourPage = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <button className="h-12 px-8 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-red-600 hover:shadow-[0_0_30px_rgba(236,19,19,0.4)] transition-all duration-300 flex items-center justify-center gap-2">
+                <a href="#tour-dates" className="h-12 px-8 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-red-600 hover:shadow-[0_0_30px_rgba(236,19,19,0.4)] transition-all duration-300 flex items-center justify-center gap-2 block">
                   <span className="material-symbols-outlined text-[20px]">calendar_month</span>
                   <span>View Dates</span>
-                </button>
+                </a>
                 <button className="h-12 px-8 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm text-white font-bold tracking-wide hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
                   <span className="material-symbols-outlined text-[20px]">play_circle</span>
                   <span>Watch Trailer</span>
@@ -83,7 +83,7 @@ const TourPage = () => {
           </div>
         </section>
 
-        <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-5 flex justify-center">
+        <section id="tour-dates" className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-5 flex justify-center">
           <div className="w-full max-w-[960px] flex items-center justify-between border-b border-white/10 pb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-3xl sm:text-4xl">public</span>
