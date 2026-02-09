@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Reekadia - Official Home',
   description: 'The official home of Reekado Banks & Reekadia Records.',
   icons: {
-    icon: '/images/logo/reekadia-transparent.png',
+    icon: '/favicon.ico',
   },
 };
 
