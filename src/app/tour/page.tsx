@@ -136,6 +136,51 @@ const TourPage = () => {
           </div>
         </section>
 
+        {/* Tour Gallery Section */}
+        <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-16 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <div className="flex items-center justify-between mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
+                <span className="material-symbols-outlined text-primary text-4xl">collections</span>
+                Tour Gallery
+              </h2>
+              <div className="hidden sm:flex items-center gap-2 text-white/50 text-sm font-medium">
+                <span>Experience the energy of past performances</span>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+                >
+                  <div
+                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{
+                      backgroundImage: `url('https://picsum.photos/seed/tour-${item}/600/600')`,
+                    }}
+                  ></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div>
+                      <h3 className="text-white font-bold text-lg">Live Performance</h3>
+                      <p className="text-white/70 text-sm">Venue Name, City</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">
+                      <span className="material-symbols-outlined text-sm">zoom_in</span>
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 pb-20 flex justify-center">
           <div className="w-full max-w-[960px] glass-bubble rounded-[3rem] p-6 sm:p-8 md:p-16 relative overflow-hidden group">
             <div className="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-colors duration-1000"></div>
