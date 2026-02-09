@@ -47,15 +47,15 @@ export default function Home() {
               </h1>
             </div>
             <div className="flex flex-wrap gap-6 justify-center mt-8">
-              <button className="group relative flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-gradient-to-br from-red-500 via-primary to-red-800 text-white text-lg font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(236,19,19,0.6)] border border-red-400/30">
+              <a href="/music" className="group relative flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-gradient-to-br from-red-500 via-primary to-red-800 text-white text-lg font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(236,19,19,0.6)] border border-red-400/30">
                 <span className="mr-2 material-symbols-outlined animate-pulse">play_circle</span>
                 <span>Listen Now</span>
                 <div className="absolute inset-0 rounded-full bg-white/20 blur-lg opacity-0 group-hover:opacity-30 transition-opacity"></div>
-              </button>
-              <button className="group flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white text-lg font-bold transition-all hover:scale-105 hover:border-white/40">
+              </a>
+              <a href="/tour" className="group flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white text-lg font-bold transition-all hover:scale-105 hover:border-white/40">
                 <span>View Tour Dates</span>
                 <span className="ml-2 material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </button>
+              </a>
             </div>
           </motion.div>
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce">
