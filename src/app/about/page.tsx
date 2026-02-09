@@ -103,17 +103,15 @@ const AboutPage = () => {
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass-panel p-4 sm:p-6 rounded-3xl border-t border-white/20 backdrop-blur-xl">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">Reekado Banks</h1>
-                    <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Ayoleyi Hanniel Solomon</p>
-                    <p className="text-sm text-gray-300 leading-relaxed font-body">
-                      Popularly known as Reekado Banks (Ayoleyi Hanniel Solomon, born December 6, 1993) is a Nigerian singer and songwriter loved for his unique sound and soulful storytelling. Over the years, he has grown into one of Afrobeats' most exciting voices, creating music that connects deeply with fans across Nigeria and around the world.
-                      <br/><br/>
-                      From winning Rookie of the Year (2014), Next Rated (2015), and Revelation of the Year (2017) at The Headies, to seeing his debut album Spotlight break into the Billboard World Albums Top 10, Reekado has built a legacy of hits and unforgettable moments. Now leading his own label REEKADIA, he continues to raise the game with his sophomore album The Game Needs You, a bold reminder that Afrobeats isn't complete without Reekado Banks.
-                    </p>
-                  </div>
-                </div>
+              </div>
+              <div className="mt-6 glass-panel p-6 rounded-3xl border-t border-white/20 backdrop-blur-xl">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">Reekado Banks</h1>
+                <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Ayoleyi Hanniel Solomon</p>
+                <p className="text-sm text-gray-300 leading-relaxed font-body">
+                  Popularly known as Reekado Banks (Ayoleyi Hanniel Solomon, born December 6, 1993) is a Nigerian singer and songwriter loved for his unique sound and soulful storytelling. Over the years, he has grown into one of Afrobeats' most exciting voices, creating music that connects deeply with fans across Nigeria and around the world.
+                  <br/><br/>
+                  From winning Rookie of the Year (2014), Next Rated (2015), and Revelation of the Year (2017) at The Headies, to seeing his debut album Spotlight break into the Billboard World Albums Top 10, Reekado has built a legacy of hits and unforgettable moments. Now leading his own label REEKADIA, he continues to raise the game with his sophomore album The Game Needs You, a bold reminder that Afrobeats isn't complete without Reekado Banks.
+                </p>
               </div>
             </div>
 
