@@ -5,6 +5,12 @@ import { Play } from 'lucide-react';
 
 const releases = [
   {
+    title: 'Nobody',
+    type: 'Single',
+    link: 'https://open.spotify.com/track/1sk1XNRYN61d4cUapprF6E?si=-S7MG3DrQNO0UUn_oMLv5g',
+    imageUrl: '/images/song-cover-art/nobody.png'
+  },
+  {
     title: 'The Game Needs You',
     type: 'Album',
     link: 'https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=MqkOTlZDTUGhD6d6NUrLRA',
@@ -93,12 +99,6 @@ const releases = [
     type: 'Album',
     link: 'https://open.spotify.com/album/1HvZC18RODcUSqng5Q9KJ9?si=N6DxNBdfQou7MSLOCzdwyQ',
     imageUrl: '/images/song-cover-art/spotlight.png'
-  },
-  {
-    title: 'Nobody',
-    type: 'Single',
-    link: '#', // Placeholder link - replace with actual link if available
-    imageUrl: '/images/song-cover-art/nobody.png'
   },
   {
     title: 'Reekadia Portrait',
