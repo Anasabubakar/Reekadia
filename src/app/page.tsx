@@ -149,14 +149,6 @@ export default function Home() {
                         <span className="material-symbols-outlined text-green-500 group-hover/icon:scale-110 transition-transform">wifi_tethering</span>
                         <span className="text-sm font-bold">Spotify</span>
                       </a>
-                      <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
-                        <span className="material-symbols-outlined text-red-500 group-hover/icon:scale-110 transition-transform">music_note</span>
-                        <span className="text-sm font-bold">Apple Music</span>
-                      </a>
-                      <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
-                        <span className="material-symbols-outlined text-yellow-500 group-hover/icon:scale-110 transition-transform">play_circle</span>
-                        <span className="text-sm font-bold">Audiomack</span>
-                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -169,7 +161,7 @@ export default function Home() {
         <section className="w-full py-16 px-4">
           <div className="max-w-[1100px] mx-auto">
             <h3 className="text-white/60 text-sm font-bold tracking-[0.2em] uppercase text-center mb-10">Join the Tribe</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-3xl text-white">photo_camera</span>
@@ -191,12 +183,32 @@ export default function Home() {
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
+                <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl text-white">play_circle</span>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-3xl font-black text-white">1.2M</h4>
+                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">YouTube</p>
+                </div>
+                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Subscribe</button>
+              </div>
+              <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
+                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center shadow-lg border border-white/10 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-3xl text-white">music_note</span>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-3xl font-black text-white">3.5M</h4>
+                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">TikTok</p>
+                </div>
+                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
+              </div>
+              <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <div className="w-16 h-16 rounded-full bg-[#1DB954] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-3xl text-black">graphic_eq</span>
                 </div>
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">850K+</h4>
-                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Monthly Listeners</p>
+                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Spotify</p>
                 </div>
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Stream</button>
               </div>
