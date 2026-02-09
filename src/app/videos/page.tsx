@@ -2,111 +2,31 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import clsx from 'clsx';
 
-interface Video {
-  title: string;
-  category: string;
-  description?: string;
-  thumbnail: string;
-  alt: string;
-  type: string;
-  aspect?: string;
-  views?: string;
-  duration?: string;
-}
-
-const videos: Video[] = [
+const videos = [
   {
-    title: 'Lagos Tour Diary: Day 1',
-    category: 'Lyrics',
-    description: 'Behind the scenes access to the rehearsal sessions and backstage madness.',
-    thumbnail: 'https://img.youtube.com/vi/bLyxCWKbWzk/maxresdefault.jpg',
-    alt: 'Tour Diary',
-    type: 'Lyrics',
-    aspect: 'aspect-[3/4]',
-  },
-  {
-    title: 'Jeun To Da (JTD)',
-    category: 'Music Video',
-    views: '2.1M Views',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCQc6OfTznj6pIRIpD9WikBs0Cpbm-k_MYWuG4b4iWoALYPgU1YY5uQkVBZ7-NJRwZRCWBljolu4LbO8RtyFCnKGkCmnyDA4O4BB2MUIWiSXoEpjkt8qZa3Rv_4FylfiwuzdaLnd7LLq_ZOMsQUI9EvUB84M3KbJl-NTlcV_8zqCy2yEblUDegAmFEMRtQHUnjk5S0gDovHUNAB8vYAvXG4APZWOuh9QG76qyL6MBxWTjmsJB34NMhur5GhB9EmZyWjaQ6TZGu96-I',
-    alt: 'Jeun To Da',
-    type: 'Music Videos',
-    aspect: 'aspect-video',
-  },
-  {
-    title: 'Put In Pressure',
-    category: 'Music Video',
-    views: '850K Views',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA8My_K_ymWYNirDvBHIBYCoM-eHGrvmewYDAobwXkXL8C_bLe5fd98qdrmaq9pkgHOJR_rwHuLUq88k59QNll-uCoZBtLS6GIKn6IprByO9OUvysdw0HKri-e8vjR1wVoIeI-kes4f7BZxuXtRxJxbGcZhRKxx5_UPxKZKxFdkVx-t_37u_AyuN_3qGeoWONQIfJOFQ6FrCbFtd-n4mvk7uB7py1twxW5CmYYsm0PsxSEIeXT-BXOHnF1lWRolUOh48IBBEGOKqGM',
-    alt: 'Put In Pressure',
-    type: 'Music Videos',
-    aspect: 'aspect-[4/3]',
-  },
-  {
-    title: 'Live Performance @ O2 Indigo',
-    category: 'Live',
-    description: 'Full set performance from the London leg of the tour.',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCJvS2dR735hln_734oppTmQuQUsNG_SgHoU8tiAznLzmk-MHxwfnP9i4KkHtdluFGDjDb7T9CNlohZO5AriFvIzwElkx3joCe12Jo878wXuGEPL_SU1HULbnl5sUPrxLPJQ2AGD98-G_FJ8RTY5PHEnzyxy0MX4us2p6bhGi3GbpdsCYvYH53wYWiivQZ1r5QF2EZcQXnNikcfDkHm_SQef-idcpuheND0adlCOgQjbXU-n4rNTSKkmouZK0Q5ql3zxY80N2z1zQc',
-    alt: 'Live at O2',
-    type: 'Live',
-    aspect: 'aspect-[9/16]',
-  },
-  {
-    title: 'Making of Ozumba Mbadiwe',
-    category: 'Vlog',
-    description: 'Documentary • 15:20',
-    thumbnail:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDmKg5JlvGdYDg6bjdmQGMn2EyLIkOoSVv_y1hOG5blJIgkZ2m7z9gVDLfqb4bkk0nlpfREMAVOC4x19m2vLrL_bRa7QC0OEJaxZweDOHuZBppL7kDUVqcjKy7otVLNLTLwAbOH1cSKeqF2DAcVjli2BgbGG-_kZv21Wl5fcO8Uwlovu3c0MFcqGa6IZego09w3ebyKvJMKz3PvkmKhdz-WjBT_tqcf2MhvWRMf3NdvBG4abwc',
-    alt: 'Making of Ozumba',
-    type: 'Vlogs',
-    aspect: 'aspect-video',
-  },
-  {
-    title: 'The Game Needs You | The Journey (Part 2)',
-    category: 'Vlog',
-    description: 'The journey behind the album.',
-    thumbnail: 'https://img.youtube.com/vi/bLyxCWKbWzk/maxresdefault.jpg',
-    alt: 'The Game Needs You | The Journey (Part 2)',
-    type: 'Vlogs',
-    aspect: 'aspect-video',
-  },
-  {
+    id: 'la0krkuGOuc',
     title: 'Mukutu (Official Video)',
     category: 'Music Video',
-    views: 'Official Video',
-    thumbnail: 'https://img.youtube.com/vi/la0krkuGOuc/maxresdefault.jpg',
-    alt: 'Mukutu (Official Video)',
-    type: 'Music Videos',
-    aspect: 'aspect-video',
   },
   {
-    title: 'Glamorous Ft Mayorkun (Official Video)',
+    id: 'bLyxCWKbWzk',
+    title: 'The Game Needs You | The Journey (Part 2)',
+    category: 'Vlog',
+  },
+  {
+    id: 'yTojxQyETDI',
+    title: 'Reekado Banks ft Mayorkun - Glamorous (Official Video)',
     category: 'Music Video',
-    views: 'Official Video',
-    thumbnail: 'https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg',
-    alt: 'Glamorous Ft Mayorkun (Official Video)',
-    type: 'Music Videos',
-    aspect: 'aspect-video',
   },
 ];
 
-const videoCategories = ['All', 'Music Videos', 'Lyrics', 'Vlogs', 'Live'];
-
 const VideosPage = () => {
-  const [activeCategory, setActiveCategory] = React.useState('All');
-
   return (
     <div className="relative min-h-screen w-full text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
-
       <div className="relative z-10 flex flex-col h-full min-h-screen">
         <main className="flex-grow flex flex-col items-center px-4 py-8 md:py-12 w-full gap-12 sm:gap-16">
-          {/* Now Playing Section */}
-          <section className="w-full max-w-[1024px] flex flex-col items-center gap-8">
+          <section className="w-full max-w-4xl flex flex-col items-center gap-8">
             <div className="flex flex-col items-center text-center gap-2">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -114,130 +34,44 @@ const VideosPage = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400"
               >
-                Music Videos, Lyrics & Vlogs
+                Videos
               </motion.h1>
             </div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative w-full aspect-video rounded-2xl md:rounded-[2.5rem] polished-glass-border overflow-hidden group"
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{
-                  backgroundImage:
-                    "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')",
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="size-20 md:size-24 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-primary hover:border-primary shadow-[0_0_30px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_50px_rgba(236,19,19,0.6)]">
-                  <span className="material-symbols-outlined text-5xl md:text-6xl filled ml-1">play_arrow</span>
-                </button>
-              </div>
-              <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-10 bg-gradient-to-t from-black via-black/60 to-transparent">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-1 rounded bg-red-600 text-[10px] font-bold uppercase tracking-wider text-white">Music Video</span>
-                      <span className="text-gray-300 text-xs font-medium">4:12</span>
-                    </div>
-                    <p className="text-gray-300 text-sm sm:text-base max-w-xl line-clamp-2">
-                      Glamorous Ft Mayorkun (Official Video)
-                    </p>
-                  </div>
-                  <div className="hidden md:flex gap-3">
-                    <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-colors text-white" title="Share">
-                      <span className="material-symbols-outlined text-xl">share</span>
-                    </button>
-                    <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-colors text-white" title="Add to Playlist">
-                      <span className="material-symbols-outlined text-xl">playlist_add</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </section>
-
-          {/* Video Grid Section */}
-          <section className="w-full max-w-[1280px] flex flex-col gap-10">
-            <div className="sticky top-24 z-30 flex w-full overflow-x-auto pb-4">
-              <div className="glass-panel-light backdrop-blur-xl p-1.5 rounded-full inline-flex gap-1 shadow-2xl border border-white/10 mx-auto">
-                {videoCategories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setActiveCategory(category)}
-                    className={clsx(
-                      'px-4 sm:px-6 py-2 rounded-full text-sm font-bold transition-all hover:scale-105 whitespace-nowrap',
-                      activeCategory === category
-                        ? 'bg-primary text-white shadow-lg shadow-primary/20'
-                        : 'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white'
-                    )}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            
+            <div className="w-full space-y-12">
               {videos.map((video, index) => (
                 <motion.div
-                  key={index}
+                  key={video.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={clsx(
-                    'break-inside-avoid relative rounded-xl overflow-hidden group cursor-pointer bg-[#1a0a0a]',
-                    video.aspect // Apply aspect ratio class
-                  )}
+                  className="glass-panel rounded-2xl overflow-hidden"
                 >
-                  <div className={clsx(video.aspect, 'bg-gray-800 relative')}>
-                    <img
-                      alt={video.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      src={video.thumbnail}
-                    />
-                    <div className="liquid-overlay"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                      <span className="material-symbols-outlined text-white text-5xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">play_circle</span>
-                    </div>
-                    {video.duration && (
-                      <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-mono">
-                        {video.duration}
-                      </div>
-                    )}
-                    {video.category === 'BTS' && (
-                      <div className="absolute top-3 left-3 bg-purple-600/80 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">
-                        {video.category}
-                      </div>
-                    )}
-                    {video.category === 'Live' && (
-                      <div className="absolute top-3 left-3 bg-red-600/80 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                        <span className="size-1.5 bg-white rounded-full animate-pulse"></span> Live
-                      </div>
-                    )}
+                  <div className="aspect-video bg-black relative">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    ></iframe>
                   </div>
-                  <div className="p-4 bg-white/5 backdrop-blur-sm border-t border-white/5">
-                    <h3 className="text-white font-bold text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
-                      {video.title}
-                    </h3>
-                    {video.description ? (
-                      <p className="text-gray-400 text-xs line-clamp-2">{video.description}</p>
-                    ) : (
-                      <span className="text-gray-400 text-xs">{video.category} • {video.views}</span>
-                    )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className={`px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-white ${
+                        video.category === 'Music Video' ? 'bg-red-600' : 'bg-blue-600'
+                      }`}>
+                        {video.category}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{video.title}</h3>
                   </div>
                 </motion.div>
               ))}
-            </div>
-
-            <div className="flex justify-center mt-8 pb-12">
-              <button className="glass-panel-light px-8 py-3 rounded-full text-sm font-bold text-white hover:bg-white/10 transition-colors flex items-center gap-2">
-                Load More Videos
-                <span className="material-symbols-outlined text-lg">expand_more</span>
-              </button>
             </div>
           </section>
         </main>
