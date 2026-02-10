@@ -149,37 +149,7 @@ const ContactPage = () => {
                 <p className="text-sm text-gray-300">Nigeria</p>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="glass-panel-light p-8 rounded-[2rem] hover:bg-white/5 transition-all hover:-translate-y-1 duration-300 group border-l-4 border-l-transparent hover:border-l-primary"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
-                    <span className="material-symbols-outlined text-primary">share</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white leading-none">Follow Reekado Banks</h3>
-                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-widest">Stay Connected</p>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-300 mb-4">Stay connected for the latest updates, music, and behind-the-scenes content</p>
-                <div className="flex gap-3">
-                  <a href="https://instagram.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
-                    <InstagramIcon size="32" />
-                  </a>
-                  <a href="https://twitter.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
-                    <X size="32" />
-                  </a>
-                  <a href="https://youtube.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
-                    <YoutubeIcon size="32" />
-                  </a>
-                  <a href="https://tiktok.com/@reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
-                    <TiktokIcon size="32" />
-                  </a>
-                </div>
-              </motion.div>
+
             </div>
           </motion.div>
         </main>

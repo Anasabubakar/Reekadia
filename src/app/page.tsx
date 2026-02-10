@@ -125,9 +125,9 @@ export default function Home() {
                   </div>
                   <div className="glass-panel-light rounded-2xl p-6 backdrop-blur-md border border-white/5">
                     <div className="flex items-center justify-between mb-4 text-xs text-gray-400 font-mono">
-                      <span>02:14</span>
+
                       <span>OFFICIAL AUDIO</span>
-                      <span>03:45</span>
+
                     </div>
 
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
