@@ -151,42 +151,44 @@ export default function Home() {
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <InstagramIcon size="32" />
                 <div className="text-center">
-                  <h4 className="text-3xl font-black text-white">2.4M</h4>
+                  <h4 className="text-3xl font-black text-white">6.3M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Instagram</p>
                 </div>
-                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
+                <a href="https://www.instagram.com/reekadobanks?igsh=Nm12ajF4MnJ3azQ4" target="_blank" rel="noopener noreferrer" className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</a>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <X size="32" />
                 <div className="text-center">
-                  <h4 className="text-3xl font-black text-white">1.8M</h4>
+                  <h4 className="text-3xl font-black text-white">2.1M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">X</p>
                 </div>
-                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
+                <a href="https://x.com/reekadobanks?s=21" target="_blank" rel="noopener noreferrer" className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</a>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <YoutubeIcon size="32" />
                 <div className="text-center">
-                  <h4 className="text-3xl font-black text-white">1.2M</h4>
+                  <h4 className="text-3xl font-black text-white">525K</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">YouTube</p>
                 </div>
-                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Subscribe</button>
+                <a href="https://youtube.com/@reekadobanks?si=X1Tr8NQP_ylI1CV6" target="_blank" rel="noopener noreferrer" className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Subscribe</a>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <TiktokIcon size="32" />
                 <div className="text-center">
-                  <h4 className="text-3xl font-black text-white">3.5M</h4>
+                  <h4 className="text-3xl font-black text-white">1.2M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">TikTok</p>
                 </div>
-                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
+                <a href="https://www.tiktok.com/@reekadobanks?_r=1&_t=ZS-93mtBaiBNAY" target="_blank" rel="noopener noreferrer" className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</a>
+
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
                 <SpotifyIcon size="32" />
                 <div className="text-center">
-                  <h4 className="text-3xl font-black text-white">850K+</h4>
+                  <h4 className="text-3xl font-black text-white">1M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Spotify</p>
                 </div>
-                <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Stream</button>
+                <a href="https://open.spotify.com/artist/3bxZkzk0PLHcetO9o4oxXn?si=cy71faGXQoaj_NRbrx0Gfw" target="_blank" rel="noopener noreferrer" className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Stream</a>
+
               </div>
             </div>
           </div>
