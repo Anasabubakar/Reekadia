@@ -2,6 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import InstagramIcon from '../components/icons/InstagramIcon';
+import X from '../components/icons/XIcon';
+import YoutubeIcon from '../components/icons/YoutubeIcon';
+import TiktokIcon from '../components/icons/TiktokIcon';
 
 const contactDetails = [
   {
@@ -23,9 +27,9 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { icon: 'photo_camera', href: 'https://instagram.com/reekadobanks' },
-  { icon: 'alternate_email', href: 'https://twitter.com/reekadobanks' },
-  { icon: 'play_arrow', href: 'https://youtube.com/reekadobanks' },
+  { icon: InstagramIcon, href: 'https://instagram.com/reekadobanks' },
+  { icon: X, href: 'https://twitter.com/reekadobanks' },
+  { icon: YoutubeIcon, href: 'https://youtube.com/reekadobanks' },
 ];
 
 const ContactPage = () => {
@@ -79,14 +83,16 @@ const ContactPage = () => {
                       <textarea className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-500 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all duration-300 backdrop-blur-md resize-none" placeholder="Tell us about your event details, dates, and budget..." rows={5}></textarea>
                     </div>
                     <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
-                      <div className="flex gap-5">
-                        {socialLinks.map((link) => (
-                          <a key={link.icon} className="glass-sphere size-12 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer group/icon" href={link.href}>
-                            <span className="material-symbols-outlined group-hover/icon:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">{link.icon}</span>
-                          </a>
-                        ))}
-                      </div>
-                      <button className="w-full md:w-auto relative overflow-hidden bg-primary hover:bg-red-600 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full shadow-[0_0_20px_rgba(236,19,19,0.4)] transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(236,19,19,0.6)]" type="button">
+                                      <div className="flex gap-5">
+                                        {socialLinks.map((link, index) => {
+                                          const IconComponent = link.icon;
+                                          return (
+                                            <a key={index} className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer" href={link.href} target="_blank" rel="noopener noreferrer">
+                                              <IconComponent size="32" />
+                                            </a>
+                                          );
+                                        })}
+                                      </div>                      <button className="w-full md:w-auto relative overflow-hidden bg-primary hover:bg-red-600 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full shadow-[0_0_20px_rgba(236,19,19,0.4)] transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(236,19,19,0.6)]" type="button">
                         <span className="relative z-10 flex items-center justify-center gap-2">
                           Send Inquiry
                           <span className="material-symbols-outlined text-lg">send</span>
@@ -160,10 +166,18 @@ const ContactPage = () => {
                 </div>
                 <p className="text-sm text-gray-300 mb-4">Stay connected for the latest updates, music, and behind-the-scenes content</p>
                 <div className="flex gap-3">
-                  <a href="https://instagram.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">IG</a>
-                  <a href="https://twitter.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">X</a>
-                  <a href="https://youtube.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">YT</a>
-                  <a href="https://tiktok.com/@reekadobanks" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold hover:scale-110 transition-transform">TK</a>
+                  <a href="https://instagram.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
+                    <InstagramIcon size="32" />
+                  </a>
+                  <a href="https://twitter.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
+                    <X size="32" />
+                  </a>
+                  <a href="https://youtube.com/reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
+                    <YoutubeIcon size="32" />
+                  </a>
+                  <a href="https://tiktok.com/@reekadobanks" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition-transform">
+                    <TiktokIcon size="32" />
+                  </a>
                 </div>
               </motion.div>
             </div>

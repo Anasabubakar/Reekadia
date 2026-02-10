@@ -2,6 +2,11 @@
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
+import SpotifyIcon from '../components/icons/SpotifyIcon';
+import TiktokIcon from '../components/icons/TiktokIcon';
+import InstagramIcon from '../components/icons/InstagramIcon';
+import X from '../components/icons/XIcon';
+import YoutubeIcon from '../components/icons/YoutubeIcon';
 
 export default function Home() {
   const featuredRef = useRef<HTMLDivElement>(null);
@@ -72,7 +77,7 @@ export default function Home() {
               className="flex items-center gap-3 mb-8 px-2"
             >
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
-              <span className="material-symbols-outlined text-primary text-2xl animate-spin-slow" style={{ animationDuration: '4s' }}>new_releases</span>
+              <span className="material-symbols-outlined text-primary text-2xl" style={{ animationDuration: '4s' }}>new_releases</span>
               <h3 className="text-white text-lg font-bold tracking-[0.2em] uppercase">Featured Release</h3>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
             </motion.div>
@@ -101,7 +106,7 @@ export default function Home() {
                     </div>
                   </div>
                   <a href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ" target="_blank" rel="noopener noreferrer" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 bg-[#1DB954]/90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_30px_rgba(29,185,84,0.8)] z-30 backdrop-blur-sm cursor-pointer">
-                    <span className="material-symbols-outlined text-5xl ml-1">spotify</span>
+                    <SpotifyIcon size="48" />
                   </a>
                 </motion.div>
                 <motion.div
@@ -127,7 +132,7 @@ export default function Home() {
 
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                       <a className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#1DB954] text-white font-bold hover:scale-105 transition-all shadow-lg" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ" target="_blank" rel="noopener noreferrer">
-                        <span className="material-symbols-outlined text-xl">spotify</span>
+                        <SpotifyIcon size="24" />
                         <span className="text-sm">Listen on Spotify</span>
                       </a>
                     </div>
@@ -141,12 +146,10 @@ export default function Home() {
         {/* Social Stats Section */}
         <section className="w-full py-16 px-4">
           <div className="max-w-[1100px] mx-auto">
-            <h3 className="text-white/60 text-sm font-bold tracking-[0.2em] uppercase text-center mb-10">Join the Tribe</h3>
+            <h3 className="text-white/60 text-sm font-bold tracking-[0.2em] uppercase text-center mb-10">Follow Reekado Banks</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl text-white">photo_camera</span>
-                </div>
+                <InstagramIcon size="32" />
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">2.4M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Instagram</p>
@@ -154,19 +157,15 @@ export default function Home() {
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center shadow-lg border border-white/10 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl text-white">alternate_email</span>
-                </div>
+                <X size="32" />
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">1.8M</h4>
-                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Twitter</p>
+                  <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">X</p>
                 </div>
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl text-white">play_circle</span>
-                </div>
+                <YoutubeIcon size="32" />
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">1.2M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">YouTube</p>
@@ -174,9 +173,7 @@ export default function Home() {
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Subscribe</button>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center shadow-lg border border-white/10 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl text-white">music_note</span>
-                </div>
+                <TiktokIcon size="32" />
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">3.5M</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">TikTok</p>
@@ -184,9 +181,7 @@ export default function Home() {
                 <button className="text-xs border border-white/20 rounded-full px-4 py-1 hover:bg-white hover:text-black transition-colors">Follow</button>
               </div>
               <div className="glass-panel p-6 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-full bg-[#1DB954] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl text-black">graphic_eq</span>
-                </div>
+                <SpotifyIcon size="32" />
                 <div className="text-center">
                   <h4 className="text-3xl font-black text-white">850K+</h4>
                   <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mt-1">Spotify</p>
@@ -214,7 +209,7 @@ export default function Home() {
                     Subscribe
                   </button>
                 </form>
-                <p className="text-xs text-gray-500 mt-2">No spam. Only good music.</p>
+
               </div>
             </div>
           </div>
