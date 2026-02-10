@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+/*
 const products = [
   {
     name: 'Reekadia Logo T-Shirt',
@@ -41,21 +42,11 @@ const products = [
     description: 'High-quality print poster, limited edition'
   },
 ];
+*/
 
 const MerchPage = () => {
   return (
     <div className="text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
-      <div className="w-full bg-black/40 backdrop-blur-sm border-b border-white/5 py-2 px-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-[10px] uppercase tracking-widest text-white/50 z-50 relative">
-        <span>Secure Checkout via</span>
-        <div className="flex items-center gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-          <span className="font-bold tracking-tight">PAYSTACK</span>
-          <span className="w-px h-3 bg-white/20"></span>
-          <span className="font-bold tracking-tight">FLUTTERWAVE</span>
-          <span className="w-px h-3 bg-white/20"></span>
-          <span className="font-bold tracking-tight">STRIPE</span>
-        </div>
-      </div>
-
       <main className="flex flex-col min-h-screen">
         <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
@@ -90,6 +81,20 @@ const MerchPage = () => {
           </div>
         </section>
 
+        {/* Merch Products Section */}
+        <section id="products-section" className="w-full px-4 sm:px-8 py-20 relative">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[128px] opacity-30 pointer-events-none"></div>
+          <div className="absolute bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] opacity-20 pointer-events-none"></div>
+
+          <div className="max-w-[1280px] mx-auto text-center py-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">Merch Coming Soon!</h2>
+            <p className="text-white/70 text-lg">Stay tuned for exclusive drops and new collections.</p>
+          </div>
+        </section>
+
+        {/* Original Products Section (Commented Out) */}
+        {/*
         <section id="products-section" className="w-full px-4 sm:px-8 py-20 relative">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
           <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[128px] opacity-30 pointer-events-none"></div>
@@ -162,6 +167,30 @@ const MerchPage = () => {
               ))}
             </div>
 
+          </div>
+        </section>
+        */}
+
+        <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 pb-20 flex justify-center">
+          <div className="w-full max-w-[960px] glass-bubble rounded-[3rem] p-6 sm:p-8 md:p-16 relative overflow-hidden group">
+            <div className="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-colors duration-1000"></div>
+            <div className="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
+            <div className="relative z-10 flex flex-col items-center text-center gap-6">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 mb-2">
+                <span className="material-symbols-outlined text-white text-3xl">lock</span>
+              </div>
+              <div className="space-y-2 max-w-2xl">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">SECURE CHECKOUT</h2>
+                <p className="text-white/70 text-base sm:text-lg">Shop with confidence. We partner with leading payment providers for secure and seamless transactions.</p>
+              </div>
+              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-4 text-white/80 text-lg font-bold uppercase tracking-widest">
+                <span>PAYSTACK</span>
+                <span className="w-px h-6 bg-white/20 hidden sm:block"></span>
+                <span>FLUTTERWAVE</span>
+                <span className="w-px h-6 bg-white/20 hidden sm:block"></span>
+                <span>STRIPE</span>
+              </div>
+            </div>
           </div>
         </section>
 
