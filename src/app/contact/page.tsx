@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import InstagramIcon from '../components/icons/InstagramIcon';
-import X from '../components/icons/XIcon';
-import YoutubeIcon from '../components/icons/YoutubeIcon';
-import TiktokIcon from '../components/icons/TiktokIcon';
+import InstagramIcon from '../../components/icons/InstagramIcon';
+import X from '../../components/icons/XIcon';
+import YoutubeIcon from '../../components/icons/YoutubeIcon';
+import TiktokIcon from '../../components/icons/TiktokIcon';
 
 const contactDetails = [
   {
