@@ -93,16 +93,16 @@ export default function Home() {
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-1 ring-white/10 animate-spin-slow vinyl-grooves p-[2%]">
                     <div
                       className="w-full h-full rounded-full bg-cover bg-center border-[8px] border-[#111]"
-                      style={{ backgroundImage: "url('https://img.youtube.com/vi/yTojxQyETDI/maxresdefault.jpg')" }}
+                      style={{ backgroundImage: "url('/images/song-cover-art/the-game-needs-you.png')" }}
                     ></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full border border-gray-700 z-20"></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-red-900 to-black rounded-full z-10 flex items-center justify-center">
                       <span className="text-[8px] font-bold text-gray-400 tracking-widest uppercase">REEKADIA</span>
                     </div>
                   </div>
-                  <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 bg-primary/90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_30px_rgba(236,19,19,0.8)] z-30 backdrop-blur-sm cursor-pointer">
-                    <span className="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                  </button>
+                  <a href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ" target="_blank" rel="noopener noreferrer" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 bg-[#1DB954]/90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_30px_rgba(29,185,84,0.8)] z-30 backdrop-blur-sm cursor-pointer">
+                    <span className="material-symbols-outlined text-5xl ml-1">spotify</span>
+                  </a>
                 </motion.div>
                 <motion.div
                   style={{
@@ -124,30 +124,11 @@ export default function Home() {
                       <span>OFFICIAL AUDIO</span>
                       <span>03:45</span>
                     </div>
-                    <div className="flex items-end justify-between gap-1 h-12 opacity-90 px-1 mb-6">
-                      <div className="w-1.5 bg-primary rounded-full h-[40%] animate-[pulse_1s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary rounded-full h-[70%] animate-[pulse_1.2s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary rounded-full h-[100%] animate-[pulse_0.8s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary/60 rounded-full h-[50%] animate-[pulse_1.5s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[30%] animate-[pulse_1.1s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary/60 rounded-full h-[60%] animate-[pulse_0.9s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary/40 rounded-full h-[40%] animate-[pulse_1.3s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-primary/80 rounded-full h-[80%] animate-[pulse_1.4s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[20%] animate-[pulse_1s_ease-in-out_infinite]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[40%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[60%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[30%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[50%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[70%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[40%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[80%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[20%]"></div>
-                      <div className="w-1.5 bg-white/30 rounded-full h-[50%]"></div>
-                    </div>
+
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                      <a className="flex items-center gap-2 px-4 py-2 rounded-full glass-panel-light hover:bg-white/10 transition-colors border border-white/10 group/icon" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ">
-                        <span className="material-symbols-outlined text-green-500 group-hover/icon:scale-110 transition-transform">wifi_tethering</span>
-                        <span className="text-sm font-bold">Spotify</span>
+                      <a className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#1DB954] text-white font-bold hover:scale-105 transition-all shadow-lg" href="https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=e_k0qpIhRuS9U1K66RkhiQ" target="_blank" rel="noopener noreferrer">
+                        <span className="material-symbols-outlined text-xl">spotify</span>
+                        <span className="text-sm">Listen on Spotify</span>
                       </a>
                     </div>
                   </div>
@@ -225,7 +206,7 @@ export default function Home() {
               <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] animate-float-slow" style={{ animationDelay: '2s' }}></div>
               <div className="relative z-10 flex flex-col items-center gap-6">
                 <span className="material-symbols-outlined text-5xl text-gray-400 font-light">mail</span>
-                <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">JOIN THE REEKADICTS</h2>
+                <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">JOIN THE REEKADDICTS</h2>
                 <p className="text-gray-300 max-w-md mx-auto">Sign up for exclusive tour announcements, merch drops, and behind-the-scenes content directly from Reekadia.</p>
                 <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md mt-4">
                   <input className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent backdrop-blur-sm transition-all" placeholder="Enter your email" type="email" />
