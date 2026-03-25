@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { Be_Vietnam_Pro, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
@@ -19,10 +18,7 @@ const notoSans = Noto_Sans({
   display: 'swap',
 });
 
-const Background = dynamic(() => import('@/components/layout/Background'), {
-  ssr: false,
-  loading: () => <div className="fixed inset-0 z-0 bg-[#110505]" aria-hidden="true" />,
-});
+import ClientBackground from '@/components/layout/ClientBackground';
 
 export const metadata: Metadata = {
   title: 'Reekadia - Official Home',
@@ -52,7 +48,7 @@ export default function RootLayout({
       >
 
 
-        <Background />
+        <ClientBackground />
         <Navbar />
         <main className="flex-grow">
           {children}
