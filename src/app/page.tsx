@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import Image from 'next/image';
 import { useRef } from 'react';
 import SpotifyIcon from '../components/icons/SpotifyIcon';
 import TiktokIcon from '../components/icons/TiktokIcon';
@@ -96,10 +97,16 @@ export default function Home() {
                   className="relative w-full aspect-square max-w-[400px] mx-auto lg:mx-0 flex items-center justify-center"
                 >
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-1 ring-white/10 animate-spin-slow vinyl-grooves p-[2%]">
-                    <div
-                      className="w-full h-full rounded-full bg-cover bg-center border-[8px] border-[#111]"
-                      style={{ backgroundImage: "url('/images/song-cover-art/the-game-needs-you.png')" }}
-                    ></div>
+                    <div className="relative w-full h-full rounded-full overflow-hidden border-[8px] border-[#111]">
+                      <Image
+                        src="/images/song-cover-art/the-game-needs-you.png"
+                        alt="The Game Needs You album cover"
+                        fill
+                        sizes="(max-width: 768px) 80vw, 400px"
+                        quality={75}
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full border border-gray-700 z-20"></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-red-900 to-black rounded-full z-10 flex items-center justify-center">
                       <span className="text-[8px] font-bold text-gray-400 tracking-widest uppercase">REEKADIA</span>

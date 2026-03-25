@@ -29,6 +29,51 @@ body {
   overflow-x: hidden;
 }
 
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* Minimal bootloader */
+.bootloader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(120% 120% at 50% 20%, #1b0b0b 0%, #110505 60%, #0b0303 100%);
+  z-index: 9999;
+}
+
+.bootloader__stack {
+  display: grid;
+  gap: 12px;
+  place-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+}
+
+.bootloader__spinner {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-top-color: #ec1313;
+  animation: spin 0.9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bootloader__spinner {
+    animation: none;
+  }
+}
+
 /* Custom Utilities for Glassmorphism */
 .glass-panel {
   background: rgba(20, 10, 10, 0.8);

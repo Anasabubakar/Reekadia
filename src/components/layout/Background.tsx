@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const heroImages = [
@@ -35,9 +36,18 @@ export default function Background() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1.5 }}
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
-                    style={{ backgroundImage: `url('${heroImages[currentImageIndex]}')` }}
-                />
+                    className="absolute inset-0 opacity-50"
+                >
+                    <Image
+                        src={heroImages[currentImageIndex]}
+                        alt=""
+                        fill
+                        sizes="100vw"
+                        quality={70}
+                        priority={currentImageIndex === 0}
+                        className="object-cover object-center"
+                    />
+                </motion.div>
             </AnimatePresence>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#221010]/60 to-[#110505] z-10"></div>
             <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-40 animate-pulse"></div>

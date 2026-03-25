@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
+/*
 const tourDates = [
   {
     date: 'NOV 12',
@@ -40,6 +42,7 @@ const tourDates = [
     status: 'Tickets',
   },
 ];
+*/
 
 const TourPage = () => {
   return (
@@ -48,25 +51,29 @@ const TourPage = () => {
 
         <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-10 lg:py-16 flex justify-center">
           <div className="w-full max-w-[1024px] rounded-2xl overflow-hidden relative group">
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 group-hover:scale-110 transition-transform duration-[2s] ease-out"
-              style={{
-                backgroundImage:
-                  'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIPRipuHQC3LTR3vLJ37SuI_82TV-81MOkMQUBjrLQtfjX_Bq6KrYvwmcuFRr45cvqy2gmNvV-735YzkAlS5yj428eaaQv2w4OXkkj6zfKCCNccjBslYl0FLUiGg93ADumSFsIB-NzY9lAWy9On0l2qJTYrA3GUJMwOpSASGpnWOjLqCH7srvydwwqYc2QM-RCtF8sMJjnwnOCg-mdoX_Ay3e3pdXZsJkvzr8BQq1qQM2RSDRilWacpURkI6qoABbwEndxSEkM4Zo")',
-              }}
-            ></div>
+            <div className="absolute inset-0 scale-105 group-hover:scale-110 transition-transform duration-[2s] ease-out">
+              <Image
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIPRipuHQC3LTR3vLJ37SuI_82TV-81MOkMQUBjrLQtfjX_Bq6KrYvwmcuFRr45cvqy2gmNvV-735YzkAlS5yj428eaaQv2w4OXkkj6zfKCCNccjBslYl0FLUiGg93ADumSFsIB-NzY9lAWy9On0l2qJTYrA3GUJMwOpSASGpnWOjLqCH7srvydwwqYc2QM-RCtF8sMJjnwnOCg-mdoX_Ay3e3pdXZsJkvzr8BQq1qQM2RSDRilWacpURkI6qoABbwEndxSEkM4Zo"
+                alt="Reekado Banks tour hero"
+                fill
+                sizes="100vw"
+                quality={70}
+                priority
+                className="object-cover object-center"
+              />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#221010] via-[#221010]/60 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-[#221010]/80 via-transparent to-[#221010]/80"></div>
             <div className="relative z-10 flex flex-col items-center justify-end min-h-[480px] p-4 sm:p-8 text-center gap-6">
               <div className="flex flex-col gap-2 items-center">
                 <span className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-[0.15em] text-white/90 mb-2">
-                  World Tour 2024
+                  World Tour 2026
                 </span>
                 <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tighter text-refraction uppercase max-w-4xl drop-shadow-2xl">
-                  Ozumba Mbadiwe
+                  THE GAME NEEDS YOU
                 </h1>
                 <p className="text-white/80 text-base sm:text-lg md:text-xl font-medium max-w-xl mx-auto drop-shadow-lg">
-                  Experience the sound of the new wave live in your city.
+                  Experience the legendary sounds of Reekado Banks live in your city.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -83,6 +90,31 @@ const TourPage = () => {
           </div>
         </section>
 
+        {/* Tour Dates Section */}
+        <section
+          id="tour-dates"
+          className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-5 flex justify-center"
+        >
+          <div className="w-full max-w-[960px] flex items-center justify-between border-b border-white/10 pb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+              <span className="material-symbols-outlined text-primary text-3xl sm:text-4xl">
+                public
+              </span>
+              Tour Dates
+            </h2>
+          </div>
+        </section>
+        <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 pb-20 flex justify-center">
+          <div className="w-full max-w-[960px] flex flex-col gap-4">
+            <div className="glass-panel group relative flex flex-col items-center justify-center p-6 rounded-2xl h-48">
+              <h3 className="text-white text-3xl font-bold">Dates Coming Soon!</h3>
+              <p className="text-white/70 text-lg">Stay tuned for updates.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Original Tour Dates Section (Commented Out) */}
+        {/*
         <section id="tour-dates" className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-5 flex justify-center">
           <div className="w-full max-w-[960px] flex items-center justify-between border-b border-white/10 pb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -113,7 +145,9 @@ const TourPage = () => {
                     <span className="text-white/40 text-sm font-bold uppercase">{tour.day}</span>
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-1 group-hover:text-primary/90 transition-colors">{tour.city}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-1 group-hover:text-primary/90 transition-colors">
+                      {tour.city}
+                    </h3>
                     <div className="flex items-center justify-center md:justify-start gap-1.5 text-white/60">
                       <span className="material-symbols-outlined text-[16px]">location_on</span>
                       <span className="text-sm font-medium">{tour.venue}</span>
@@ -135,6 +169,7 @@ const TourPage = () => {
             ))}
           </div>
         </section>
+        */}
 
         {/* Tour Gallery Section */}
         <section className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-16 flex justify-center">
@@ -158,12 +193,16 @@ const TourPage = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
                 >
-                  <div
-                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{
-                      backgroundImage: `url('https://picsum.photos/seed/tour-${item}/600/600')`,
-                    }}
-                  ></div>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={`https://picsum.photos/seed/tour-${item}/600/600`}
+                      alt={`Tour gallery image ${item}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={70}
+                      className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                       <h3 className="text-white font-bold text-lg">Live Performance</h3>

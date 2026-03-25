@@ -1,20 +1,27 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { Be_Vietnam_Pro, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Background from '@/components/layout/Background';
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: '--font-be-vietnam-pro',
   subsets: ['latin'],
   weight: ['400', '500', '700', '900'],
+  display: 'swap',
 });
 
 const notoSans = Noto_Sans({
   variable: '--font-noto-sans',
   subsets: ['latin'],
   weight: ['400', '500', '700'],
+  display: 'swap',
+});
+
+const Background = dynamic(() => import('@/components/layout/Background'), {
+  ssr: false,
+  loading: () => <div className="fixed inset-0 z-0 bg-[#110505]" aria-hidden="true" />,
 });
 
 export const metadata: Metadata = {
@@ -33,6 +40,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"

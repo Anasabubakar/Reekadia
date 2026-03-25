@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 const careerMilestones = [
   {
@@ -95,13 +96,17 @@ const AboutPage = () => {
             {/* Artist Profile Section */}
             <div className="lg:col-span-5 flex flex-col h-full">
               <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[650px] rounded-[2.5rem] overflow-hidden group shadow-2xl border border-white/10">
-                <div
-                  className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-                  style={{
-                    backgroundImage:
-                      "url('/images/song-cover-art/reekadia-portrait.png')",
-                  }}
-                ></div>
+                <div className="absolute inset-0">
+                  <Image
+                    src="/images/song-cover-art/reekadia-portrait.png"
+                    alt="Reekado Banks portrait"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 520px"
+                    quality={75}
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    priority
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
               </div>
               <div className="mt-6 glass-panel p-6 rounded-3xl border-t border-white/20 backdrop-blur-xl">
