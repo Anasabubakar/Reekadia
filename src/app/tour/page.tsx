@@ -46,6 +46,7 @@ const tourDates = [
 
 const TourPage = () => {
   const [activeImage, setActiveImage] = React.useState<string | null>(null);
+  const touchStart = React.useRef<{ x: number; y: number } | null>(null);
   const galleryImages = [
     '/images/reekadia-tour-gallery-images/1.png',
     '/images/reekadia-tour-gallery-images/2.png',
@@ -55,6 +56,19 @@ const TourPage = () => {
     '/images/reekadia-tour-gallery-images/6.png',
     '/images/reekadia-tour-gallery-images/7.png',
   ];
+
+  React.useEffect(() => {
+    if (!activeImage) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeImage]);
 
   return (
     <div className="font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
@@ -233,6 +247,25 @@ const TourPage = () => {
               <div
                 className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center px-4"
                 onClick={() => setActiveImage(null)}
+                onTouchStart={(event) => {
+                  const touch = event.touches[0];
+                  if (!touch) return;
+                  touchStart.current = { x: touch.clientX, y: touch.clientY };
+                }}
+                onTouchEnd={(event) => {
+                  if (!touchStart.current) return;
+                  const touch = event.changedTouches[0];
+                  if (!touch) return;
+                  const deltaX = touch.clientX - touchStart.current.x;
+                  const deltaY = touch.clientY - touchStart.current.y;
+                  const absX = Math.abs(deltaX);
+                  const absY = Math.abs(deltaY);
+                  touchStart.current = null;
+
+                  if (absY > 80 && absY > absX) {
+                    setActiveImage(null);
+                  }
+                }}
               >
                 <div
                   className="relative w-full max-w-5xl aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-black/50"
