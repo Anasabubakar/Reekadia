@@ -45,7 +45,7 @@ const tourDates = [
 */
 
 const TourPage = () => {
-  const [activeImage, setActiveImage] = React.useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
   const touchStart = React.useRef<{ x: number; y: number } | null>(null);
   const galleryImages = [
     '/images/reekadia-tour-gallery-images/1.png',
@@ -58,17 +58,19 @@ const TourPage = () => {
   ];
 
   React.useEffect(() => {
-    if (!activeImage) return;
+    if (activeIndex === null) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setActiveImage(null);
+        setActiveIndex(null);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeImage]);
+  }, [activeIndex]);
+
+  const currentImage = activeIndex === null ? null : galleryImages[activeIndex];
 
   return (
     <div className="font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
@@ -217,7 +219,7 @@ const TourPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
-                  onClick={() => setActiveImage(src)}
+                  onClick={() => setActiveIndex(index)}
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -234,7 +236,7 @@ const TourPage = () => {
                       type="button"
                       aria-label="Open image"
                       className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
-                      onClick={() => setActiveImage(src)}
+                      onClick={() => setActiveIndex(index)}
                     >
                       <span className="material-symbols-outlined text-sm">zoom_in</span>
                     </button>
@@ -243,10 +245,10 @@ const TourPage = () => {
               ))}
             </div>
 
-            {activeImage ? (
+            {currentImage ? (
               <div
                 className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center px-4"
-                onClick={() => setActiveImage(null)}
+                onClick={() => setActiveIndex(null)}
                 onTouchStart={(event) => {
                   const touch = event.touches[0];
                   if (!touch) return;
@@ -263,7 +265,18 @@ const TourPage = () => {
                   touchStart.current = null;
 
                   if (absY > 80 && absY > absX) {
-                    setActiveImage(null);
+                    setActiveIndex(null);
+                    return;
+                  }
+
+                  if (absX > 80 && absX > absY) {
+                    if (activeIndex === null) return;
+                    const total = galleryImages.length;
+                    if (deltaX < 0) {
+                      setActiveIndex((activeIndex + 1) % total);
+                    } else {
+                      setActiveIndex((activeIndex - 1 + total) % total);
+                    }
                   }
                 }}
               >
@@ -272,7 +285,7 @@ const TourPage = () => {
                   onClick={(event) => event.stopPropagation()}
                 >
                   <Image
-                    src={activeImage}
+                    src={currentImage}
                     alt="Reekadia tour gallery preview"
                     fill
                     sizes="(max-width: 768px) 100vw, 80vw"
@@ -283,7 +296,7 @@ const TourPage = () => {
                     type="button"
                     aria-label="Close preview"
                     className="absolute top-4 right-4 size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
-                    onClick={() => setActiveImage(null)}
+                    onClick={() => setActiveIndex(null)}
                   >
                     <span className="material-symbols-outlined text-sm">close</span>
                   </button>
