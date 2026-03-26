@@ -45,6 +45,17 @@ const tourDates = [
 */
 
 const TourPage = () => {
+  const [activeImage, setActiveImage] = React.useState<string | null>(null);
+  const galleryImages = [
+    '/images/reekadia-tour-gallery-images/1.png',
+    '/images/reekadia-tour-gallery-images/2.png',
+    '/images/reekadia-tour-gallery-images/3.png',
+    '/images/reekadia-tour-gallery-images/4.png',
+    '/images/reekadia-tour-gallery-images/5.png',
+    '/images/reekadia-tour-gallery-images/6.png',
+    '/images/reekadia-tour-gallery-images/7.png',
+  ];
+
   return (
     <div className="font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
       <main className="flex-1 flex flex-col w-full relative pt-20">
@@ -185,21 +196,14 @@ const TourPage = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                '/images/reekadia-tour-gallery-images/1.png',
-                '/images/reekadia-tour-gallery-images/2.png',
-                '/images/reekadia-tour-gallery-images/3.png',
-                '/images/reekadia-tour-gallery-images/4.png',
-                '/images/reekadia-tour-gallery-images/5.png',
-                '/images/reekadia-tour-gallery-images/6.png',
-                '/images/reekadia-tour-gallery-images/7.png',
-              ].map((src, index) => (
+              {galleryImages.map((src, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+                  onClick={() => setActiveImage(src)}
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -212,13 +216,47 @@ const TourPage = () => {
                     />
                   </div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">
+                    <button
+                      type="button"
+                      aria-label="Open image"
+                      className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
+                      onClick={() => setActiveImage(src)}
+                    >
                       <span className="material-symbols-outlined text-sm">zoom_in</span>
                     </button>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            {activeImage ? (
+              <div
+                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center px-4"
+                onClick={() => setActiveImage(null)}
+              >
+                <div
+                  className="relative w-full max-w-5xl aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-black/50"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <Image
+                    src={activeImage}
+                    alt="Reekadia tour gallery preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                    quality={80}
+                    className="object-contain"
+                  />
+                  <button
+                    type="button"
+                    aria-label="Close preview"
+                    className="absolute top-4 right-4 size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
+                    onClick={() => setActiveImage(null)}
+                  >
+                    <span className="material-symbols-outlined text-sm">close</span>
+                  </button>
+                </div>
+              </div>
+            ) : null}
           </div>
         </section>
 
