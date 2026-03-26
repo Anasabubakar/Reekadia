@@ -185,7 +185,15 @@ const TourPage = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((item, index) => (
+              {[
+                '/images/reekadia-tour-gallery-images/1.png',
+                '/images/reekadia-tour-gallery-images/2.png',
+                '/images/reekadia-tour-gallery-images/3.png',
+                '/images/reekadia-tour-gallery-images/4.png',
+                '/images/reekadia-tour-gallery-images/5.png',
+                '/images/reekadia-tour-gallery-images/6.png',
+                '/images/reekadia-tour-gallery-images/7.png',
+              ].map((src, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -195,19 +203,13 @@ const TourPage = () => {
                 >
                   <div className="absolute inset-0">
                     <Image
-                      src={`https://picsum.photos/seed/tour-${item}/600/600`}
-                      alt={`Tour gallery image ${item}`}
+                      src={src}
+                      alt={`Reekadia tour gallery image ${index + 1}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       quality={70}
                       className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                      <h3 className="text-white font-bold text-lg">Live Performance</h3>
-                      <p className="text-white/70 text-sm">Venue Name, City</p>
-                    </div>
                   </div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">
