@@ -60,14 +60,32 @@ const TourPage = () => {
   React.useEffect(() => {
     if (activeIndex === null) return;
 
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setActiveIndex(null);
+        return;
+      }
+      if (activeIndex === null) return;
+      const total = galleryImages.length;
+      if (event.key === 'ArrowRight') {
+        setActiveIndex((activeIndex + 1) % total);
+      }
+      if (event.key === 'ArrowLeft') {
+        setActiveIndex((activeIndex - 1 + total) % total);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
   }, [activeIndex]);
 
   const currentImage = activeIndex === null ? null : galleryImages[activeIndex];
@@ -247,7 +265,7 @@ const TourPage = () => {
 
             {currentImage ? (
               <div
-                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center px-4"
+                className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center px-4"
                 onClick={() => setActiveIndex(null)}
                 onTouchStart={(event) => {
                   const touch = event.touches[0];
@@ -292,6 +310,30 @@ const TourPage = () => {
                     quality={80}
                     className="object-contain"
                   />
+                  <button
+                    type="button"
+                    aria-label="Previous image"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 size-11 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
+                    onClick={() => {
+                      if (activeIndex === null) return;
+                      const total = galleryImages.length;
+                      setActiveIndex((activeIndex - 1 + total) % total);
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-base">chevron_left</span>
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Next image"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 size-11 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
+                    onClick={() => {
+                      if (activeIndex === null) return;
+                      const total = galleryImages.length;
+                      setActiveIndex((activeIndex + 1) % total);
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-base">chevron_right</span>
+                  </button>
                   <button
                     type="button"
                     aria-label="Close preview"
