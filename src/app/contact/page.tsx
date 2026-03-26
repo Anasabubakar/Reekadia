@@ -13,8 +13,8 @@ const contactDetails = [
     department: 'Shows, Appearances & Performance Bookings',
     email: 'management@reekadia.com',
     icon: 'calendar_month',
-    manager: 'Opeyemi',
-    phone: '+234 903 680 3743'
+    manager: 'Reekadia',
+    phone: '+234 708 216 4302'
   },
   {
     title: 'Press & Media Contact',
