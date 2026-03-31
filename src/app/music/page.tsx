@@ -7,7 +7,7 @@ const releases = [
   {
     title: 'Nobody',
     type: 'Single',
-    link: 'https://open.spotify.com/track/1sk1XNRYN61d4cUapprF6E?si=-S7MG3DrQNO0UUn_oMLv5g',
+    link: 'https://open.spotify.com/album/6XNG8o3oBTu8moQYN7Z3yo?si=TDf4EDatSK21OPXCmZrPIA',
     imageUrl: '/images/song-cover-art/nobody.png'
   },
   {
