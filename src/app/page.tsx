@@ -29,10 +29,14 @@ export default function Home() {
   const y = useSpring(rawY, springConfig);
   const rotateX = useSpring(rawRotateX, springConfig);
 
-  const vinylScale = useSpring(useTransform(scrollYProgress, [0, 1], [0.8, 1]), springConfig);
-  const vinylRotate = useSpring(useTransform(scrollYProgress, [0, 1], [-10, 0]), springConfig);
-  const contentX = useSpring(useTransform(scrollYProgress, [0, 1], [50, 0]), springConfig);
-  const contentOpacity = useSpring(useTransform(scrollYProgress, [0.4, 1], [0, 1]), springConfig);
+  const vinylScaleRaw = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const vinylScale = useSpring(vinylScaleRaw, springConfig);
+  const vinylRotateRaw = useTransform(scrollYProgress, [0, 1], [-10, 0]);
+  const vinylRotate = useSpring(vinylRotateRaw, springConfig);
+  const contentXRaw = useTransform(scrollYProgress, [0, 1], [50, 0]);
+  const contentX = useSpring(contentXRaw, springConfig);
+  const contentOpacityRaw = useTransform(scrollYProgress, [0.4, 1], [0, 1]);
+  const contentOpacity = useSpring(contentOpacityRaw, springConfig);
 
   return (
     <div className="relative z-10 flex flex-col h-full min-h-screen">

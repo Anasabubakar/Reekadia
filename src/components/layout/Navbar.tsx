@@ -37,8 +37,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [pathname]);
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [pathname, isMobileMenuOpen]);
 
   return (
     <div className="w-full flex justify-center pt-6 px-4 sticky top-0 z-50">
