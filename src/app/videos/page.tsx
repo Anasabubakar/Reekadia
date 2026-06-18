@@ -5,6 +5,11 @@ import { motion } from 'framer-motion';
 
 const videos = [
   {
+    id: 'YKfcQDurc5g',
+    title: 'CDQ X Reekado Banks - Kawasaki (Official Video)',
+    category: 'Music Video',
+  },
+  {
     id: 'la0krkuGOuc',
     title: 'Mukutu (Official Video)',
     category: 'Music Video',

@@ -5,6 +5,12 @@ import { Play } from 'lucide-react';
 
 const releases = [
   {
+    title: 'CDQ X Reekado Banks - Kawasaki',
+    type: 'Single',
+    link: 'https://open.spotify.com/track/14bzgxQBrUAyntSm0L41N6?si=Qt-tFdliS4qm6ovmfuF9iw',
+    imageUrl: '/images/song-cover-art/kawasaki.png'
+  },
+  {
     title: 'Nobody',
     type: 'Single',
     link: 'https://open.spotify.com/album/6XNG8o3oBTu8moQYN7Z3yo?si=TDf4EDatSK21OPXCmZrPIA',
