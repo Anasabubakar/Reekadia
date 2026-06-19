@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 const navLinks = [
@@ -53,13 +54,13 @@ export default function Navbar() {
         {/* ... inside the component */}
         <Link href="/" className="flex items-center gap-2 sm:gap-4 text-white group">
           <div className="relative size-10 md:size-12 flex items-center justify-center">
-            <Image
-              src="/images/logo/reekadia-transparent.png"
-              alt="Reekadia Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+              <Image
+                src="/images/logo/reekadia-transparent.webp"
+                alt="Reekadia Logo"
+                fill
+                className="object-contain"
+                priority
+              />
           </div>
           <h2 className="text-white text-xl font-bold tracking-tight uppercase hidden sm:block">Reekadia</h2>
         </Link>
@@ -127,7 +128,7 @@ export default function Navbar() {
             className="md:hidden text-white flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(true)}
           >
-            <span className="material-symbols-outlined">menu</span>
+            <Menu size={24} />
           </button>
         </div>
       </header>
@@ -144,7 +145,7 @@ export default function Navbar() {
           >
             <div className="flex justify-end p-4">
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-white text-2xl">
-                <span className="material-symbols-outlined">close</span>
+                <X size={24} />
               </button>
             </div>
             <nav className="flex flex-col items-center gap-6 py-8">

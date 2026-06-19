@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import Image from 'next/image';
+import { ScrollText, Trophy, Star } from 'lucide-react';
 
 const careerMilestones = [
   {
@@ -98,11 +99,11 @@ const AboutPage = () => {
               <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[650px] rounded-[2.5rem] overflow-hidden group shadow-2xl border border-white/10">
                 <div className="absolute inset-0">
                   <Image
-                    src="/images/song-cover-art/reekadia-portrait.png"
+                    src="/images/song-cover-art/reekadia-portrait.webp"
                     alt="Reekado Banks portrait"
                     fill
                     sizes="(max-width: 1024px) 90vw, 520px"
-                    quality={75}
+                    quality={70}
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     priority
                   />
@@ -123,7 +124,7 @@ const AboutPage = () => {
             {/* Career Milestones Section */}
             <div className="lg:col-span-7 flex flex-col pt-4">
               <div className="flex items-center gap-4 mb-8">
-                <span className="material-symbols-outlined text-primary text-3xl animate-spin-slow">history_edu</span>
+                <ScrollText className="text-primary animate-spin-slow" size={32} />
                 <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-widest text-white">Career Milestones</h2>
               </div>
               <div className="relative pl-8 border-l border-white/10 space-y-12 pb-8">
@@ -162,7 +163,7 @@ const AboutPage = () => {
                         <p className="text-gray-400 text-sm mt-1 leading-relaxed">{milestone.description}</p>
                         {milestone.highlight && (
                           <div className="flex justify-between items-start mt-2">
-                            <span className="material-symbols-outlined text-4xl sm:text-5xl text-primary/80 drop-shadow-[0_0_10px_rgba(236,19,19,0.5)]">emoji_events</span>
+                            <Trophy className="text-primary/80" size={48} />
                           </div>
                         )}
                       </div>
@@ -176,7 +177,7 @@ const AboutPage = () => {
             <div className="lg:col-span-12 mt-12">
               <div className="glass-panel rounded-[2rem] p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="material-symbols-outlined text-primary text-3xl">star</span>
+                  <Star className="text-primary" size={32} />
                   <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-widest text-white">Awards & Recognition</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

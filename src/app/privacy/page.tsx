@@ -5,7 +5,7 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen bg-[#110505] text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <Link href="/" className="inline-flex items-center text-primary mb-8">
-          <span className="material-symbols-outlined mr-2">arrow_back</span>
+          <span className="mr-2" aria-hidden="true">&#8592;</span>
           Back to Home
         </Link>
         

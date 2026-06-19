@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative size-10 flex items-center justify-center">
                 <Image
-                  src="/images/logo/reekadia-transparent.png"
+                  src="/images/logo/reekadia-transparent.webp"
                   alt="Reekadia Logo"
                   fill
                   className="object-contain"

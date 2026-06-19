@@ -8,103 +8,103 @@ const releases = [
     title: 'CDQ X Reekado Banks - Kawasaki',
     type: 'Single',
     link: 'https://open.spotify.com/track/14bzgxQBrUAyntSm0L41N6?si=Qt-tFdliS4qm6ovmfuF9iw',
-    imageUrl: '/images/song-cover-art/artwork-awasaki.jpg'
+    imageUrl: '/images/song-cover-art/artwork-awasaki.webp'
   },
   {
     title: 'Nobody',
     type: 'Single',
     link: 'https://open.spotify.com/album/6XNG8o3oBTu8moQYN7Z3yo?si=TDf4EDatSK21OPXCmZrPIA',
-    imageUrl: '/images/song-cover-art/nobody.png'
+    imageUrl: '/images/song-cover-art/nobody.webp'
   },
   {
     title: 'The Game Needs You',
     type: 'Album',
     link: 'https://open.spotify.com/album/6ugTlnX34eEh3pmI7sTXD2?si=MqkOTlZDTUGhD6d6NUrLRA',
-    imageUrl: '/images/song-cover-art/the-game-needs-you.png'
+    imageUrl: '/images/song-cover-art/the-game-needs-you.webp'
   },
   {
     title: 'Glamorous Ft Mayorkun',
     type: 'Single',
     link: 'https://open.spotify.com/album/6FI7fgpszgy8ZZODsis6Pi?si=ndjpq33mQ2SyNxZWLoKGGg',
-    imageUrl: '/images/song-cover-art/glamorous.png'
+    imageUrl: '/images/song-cover-art/glamorous.webp'
   },
   {
     title: 'Mukutu',
     type: 'Single',
     link: 'https://open.spotify.com/album/4Q2pEBNlOZAhdIDdtOZI2Z?si=eYk95xgGTcGxXZRMNQgo-Q',
-    imageUrl: '/images/song-cover-art/mukutu.png'
+    imageUrl: '/images/song-cover-art/mukutu.webp'
   },
   {
     title: 'Solo',
     type: 'Single',
     link: 'https://open.spotify.com/album/7wQgtOaa74hP33p7xzkRHO?si=sKpOVXvIQLCc3ue-eB2g6Q',
-    imageUrl: '/images/song-cover-art/solo.png'
+    imageUrl: '/images/song-cover-art/solo.webp'
   },
   {
     title: 'Fakosi Ft Seyi Vibez, DelB',
     type: 'Single',
     link: 'https://open.spotify.com/album/3YPNvgCesJrEaLZgZLXzdt?si=Lz7K2DkvSk6vQ6iG47Aq3Q',
-    imageUrl: '/images/song-cover-art/fakosi.png'
+    imageUrl: '/images/song-cover-art/fakosi.webp'
   },
   {
     title: 'Feeling Different Ft Adekunle Gold, Maleek Berry',
     type: 'Single',
     link: 'https://open.spotify.com/album/3WkYJGUSNOTvGoe4YkIVjM?si=RKJi7c9KRnyfmjBh99GHhA',
-    imageUrl: '/images/song-cover-art/feel-different.png'
+    imageUrl: '/images/song-cover-art/feel-different.webp'
   },
   {
     title: 'Ozumba Mbadiwe',
     type: 'Single',
     link: 'https://open.spotify.com/album/6oYKhPbYdaaYGGnqZIqlNs?si=lQwAqUwgSK-NLXO5771iKA',
-    imageUrl: '/images/song-cover-art/ozumba-mbadiwe.png'
+    imageUrl: '/images/song-cover-art/ozumba-mbadiwe.webp'
   },
   {
     title: 'OTR VOL. 2 | WHERE DID WE STOP?',
     type: 'EP',
     link: 'https://open.spotify.com/album/6YbuBOhChrDQBd8jeIvhjj?si=7V9fG49HTJGRdhxZHk7NPw',
-    imageUrl: '/images/song-cover-art/where-did-we-stop.png'
+    imageUrl: '/images/song-cover-art/where-did-we-stop.webp'
   },
   {
     title: 'OFF THE RECORD',
     type: 'EP',
     link: 'https://open.spotify.com/album/2U8mtLvqgQVcrCx4V7H1HJ?si=1MZnyPmGSU-3pUWKT0e5vg',
-    imageUrl: '/images/song-cover-art/Untitled design - 10.png'
+    imageUrl: '/images/song-cover-art/Untitled design - 10.webp'
   },
   {
     title: 'Omolomo Ft Wizkid',
     type: 'Single',
     link: 'https://open.spotify.com/album/6EQxI2JlN9WV4hXWCbdhfl?si=jBztS2FtRTuU9AczcIn64A',
-    imageUrl: '/images/song-cover-art/omo-olomo.png'
+    imageUrl: '/images/song-cover-art/omo-olomo.webp'
   },
   {
     title: 'Rora',
     type: 'Single',
     link: 'https://open.spotify.com/album/1YoKg4rLeRUTxjs9jyYk3u?si=hEyjEEaARWOXSvBtrV2YKw',
-    imageUrl: '/images/song-cover-art/rora.png'
+    imageUrl: '/images/song-cover-art/rora.webp'
   },
   {
     title: 'Like',
     type: 'Single',
     link: 'https://open.spotify.com/album/38qliUD5SEnqbPbHz8sJlW?si=nIAk3LZXRsKpgPo3GXx5aQ',
-    imageUrl: '/images/song-cover-art/like.png'
+    imageUrl: '/images/song-cover-art/like.webp'
   },
   {
     title: 'Easy Jeje',
     type: 'Single',
     link: 'https://open.spotify.com/album/2Tc7JXLB2WpKkKegbhrGna?si=4sYlF3LYQAeAKgVzwTEtVg',
-    imageUrl: '/images/song-cover-art/easy(jeje).png'
+    imageUrl: '/images/song-cover-art/easy(jeje).webp'
   },
   {
     title: 'Katapot',
     type: 'Single',
     link: 'https://open.spotify.com/album/1YpcjDbbS3vAnYvm5KT1zab?si=5FJRO6yhR42q3Twb41tQBA',
-    imageUrl: '/images/song-cover-art/katapot.png'
+    imageUrl: '/images/song-cover-art/katapot.webp'
   },
   {
     title: 'Spotlight',
     type: 'Album',
     link: 'https://open.spotify.com/album/1HvZC18RODcUSqng5Q9KJ9?si=N6DxNBdfQou7MSLOCzdwyQ',
-    imageUrl: '/images/song-cover-art/spotlight.png'
+    imageUrl: '/images/song-cover-art/spotlight.webp'
   },
 ];
 
@@ -137,7 +137,7 @@ export default function MusicPage() {
                 >
                   <a href={release.link} target="_blank" rel="noopener noreferrer">
                     <div className="aspect-square bg-neutral-900 rounded-2xl mb-4 overflow-hidden relative glass-panel-light">
-                      <img src={release.imageUrl} alt={release.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <img src={release.imageUrl} alt={release.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                         <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform shadow-xl">
                           <Play fill="currentColor" className="ml-1" />

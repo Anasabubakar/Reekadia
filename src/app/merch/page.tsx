@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight, Lock, Verified, Truck, Undo2 } from 'lucide-react';
 
 /*
 const products = [
@@ -75,7 +76,7 @@ const MerchPage = () => {
             >
               <a href="#products-section" className="flex items-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-red-600 text-white text-sm font-bold tracking-wide uppercase transition-all shadow-[0_0_20px_rgba(236,19,19,0.4)] hover:shadow-[0_0_30px_rgba(236,19,19,0.6)] block">
                 Shop Now
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                <ArrowRight size={18} />
               </a>
             </motion.div>
           </div>
@@ -108,7 +109,7 @@ const MerchPage = () => {
               </div>
               <div className="flex gap-2">
                 <button className="p-2 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors">
-                  <span className="material-symbols-outlined">filter_list</span>
+                  <Filter size={24} />
                 </button>
                 <button className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 text-sm font-medium transition-colors">
                   Sort by: Featured
@@ -129,12 +130,12 @@ const MerchPage = () => {
                     <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-white/10 to-transparent opacity-50"></div>
                     <div
                       className="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{ backgroundImage: `url('${product.imageUrl}')` }}
+                      style={{ backgroundImage: url('${product.imageUrl}') }}
                       aria-label={product.alt}
                     ></div>
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <button className="size-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                        <span className="material-symbols-outlined text-[20px]">favorite</span>
+                        <Heart size={20} />
                       </button>
                     </div>
                   </div>
@@ -155,11 +156,11 @@ const MerchPage = () => {
                             <option key={idx} value={size}>{size}</option>
                           ))}
                         </select>
-                        <span className="absolute right-2 top-1/2 transform -translate-y-1/2 material-symbols-outlined text-xs pointer-events-none">expand_more</span>
+                        <ChevronDown size={12} className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
                       </div>
                     </div>
                     <button className="w-full h-12 rounded-full bg-white/5 hover:bg-primary border border-white/10 hover:border-primary text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_15px_rgba(236,19,19,0.3)]">
-                      <span className="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                      <ShoppingCart size={18} />
                       Add to Cart
                     </button>
                   </div>
@@ -177,7 +178,7 @@ const MerchPage = () => {
             <div className="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
             <div className="relative z-10 flex flex-col items-center text-center gap-6">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 mb-2">
-                <span className="material-symbols-outlined text-white text-3xl">lock</span>
+                <Lock className="text-white" size={32} />
               </div>
               <div className="space-y-2 max-w-2xl">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">SECURE CHECKOUT</h2>
@@ -201,15 +202,15 @@ const MerchPage = () => {
             <p className="text-white/80 mb-6">We accept all major payment methods including Paystack, Flutterwave, and Stripe for secure transactions.</p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                <span className="material-symbols-outlined text-primary">verified</span>
+                <Verified className="text-primary" size={20} />
                 <span className="text-sm font-medium">Secure Checkout</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                <span className="material-symbols-outlined text-primary">local_shipping</span>
+                <Truck className="text-primary" size={20} />
                 <span className="text-sm font-medium">Fast Shipping</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                <span className="material-symbols-outlined text-primary">undo</span>
+                <Undo2 className="text-primary" size={20} />
                 <span className="text-sm font-medium">Easy Returns</span>
               </div>
             </div>

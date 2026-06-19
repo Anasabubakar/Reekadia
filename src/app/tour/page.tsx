@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Calendar, Play, Globe, Images, ZoomIn, ChevronLeft, ChevronRight, X, Mail } from 'lucide-react';
 
 /*
 const tourDates = [
@@ -48,13 +49,13 @@ const TourPage = () => {
   const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
   const touchStart = React.useRef<{ x: number; y: number } | null>(null);
   const galleryImages = [
-    '/images/reekadia-tour-gallery-images/1.png',
-    '/images/reekadia-tour-gallery-images/2.png',
-    '/images/reekadia-tour-gallery-images/3.png',
-    '/images/reekadia-tour-gallery-images/4.png',
-    '/images/reekadia-tour-gallery-images/5.png',
-    '/images/reekadia-tour-gallery-images/6.png',
-    '/images/reekadia-tour-gallery-images/7.png',
+    '/images/reekadia-tour-gallery-images/1.webp',
+    '/images/reekadia-tour-gallery-images/2.webp',
+    '/images/reekadia-tour-gallery-images/3.webp',
+    '/images/reekadia-tour-gallery-images/4.webp',
+    '/images/reekadia-tour-gallery-images/5.webp',
+    '/images/reekadia-tour-gallery-images/6.webp',
+    '/images/reekadia-tour-gallery-images/7.webp',
   ];
 
   React.useEffect(() => {
@@ -102,7 +103,7 @@ const TourPage = () => {
                 alt="Reekado Banks tour hero"
                 fill
                 sizes="100vw"
-                quality={70}
+                quality={60}
                 priority
                 className="object-cover object-center"
               />
@@ -123,11 +124,11 @@ const TourPage = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <a href="#tour-dates" className="h-12 px-8 rounded-full bg-primary text-white font-bold tracking-wide hover:bg-red-600 hover:shadow-[0_0_30px_rgba(236,19,19,0.4)] transition-all duration-300 flex items-center justify-center gap-2 block">
-                  <span className="material-symbols-outlined text-[20px]">calendar_month</span>
+                  <Calendar size={20} />
                   <span>View Dates</span>
                 </a>
                 <button className="h-12 px-8 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm text-white font-bold tracking-wide hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
-                  <span className="material-symbols-outlined text-[20px]">play_circle</span>
+                  <Play fill="currentColor" size={20} />
                   <span>Watch Trailer</span>
                 </button>
               </div>
@@ -142,9 +143,7 @@ const TourPage = () => {
         >
           <div className="w-full max-w-[960px] flex items-center justify-between border-b border-white/10 pb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-              <span className="material-symbols-outlined text-primary text-3xl sm:text-4xl">
-                public
-              </span>
+              <Globe className="text-primary" size={32} />
               Tour Dates
             </h2>
           </div>
@@ -163,11 +162,11 @@ const TourPage = () => {
         <section id="tour-dates" className="relative z-10 w-full px-4 sm:px-6 lg:px-40 py-5 flex justify-center">
           <div className="w-full max-w-[960px] flex items-center justify-between border-b border-white/10 pb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-              <span className="material-symbols-outlined text-primary text-3xl sm:text-4xl">public</span>
+              <Globe className="text-primary" size={32} />
               Tour Dates
             </h2>
             <div className="hidden sm:flex items-center gap-2 text-white/50 text-sm font-medium">
-              <span className="material-symbols-outlined text-[18px]">info</span>
+              <Info size={18} />
               <span>All times are local</span>
             </div>
           </div>
@@ -194,7 +193,7 @@ const TourPage = () => {
                       {tour.city}
                     </h3>
                     <div className="flex items-center justify-center md:justify-start gap-1.5 text-white/60">
-                      <span className="material-symbols-outlined text-[16px]">location_on</span>
+                      <MapPin size={16} />
                       <span className="text-sm font-medium">{tour.venue}</span>
                     </div>
                   </div>
@@ -221,7 +220,7 @@ const TourPage = () => {
           <div className="w-full max-w-[1200px]">
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary text-4xl">collections</span>
+                <Images className="text-primary" size={40} />
                 Tour Gallery
               </h2>
               <div className="hidden sm:flex items-center gap-2 text-white/50 text-sm font-medium">
@@ -245,7 +244,8 @@ const TourPage = () => {
                       alt={`Reekadia tour gallery image ${index + 1}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      quality={70}
+                      quality={65}
+                      loading="lazy"
                       className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
@@ -256,7 +256,7 @@ const TourPage = () => {
                       className="size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
                       onClick={() => setActiveIndex(index)}
                     >
-                      <span className="material-symbols-outlined text-sm">zoom_in</span>
+                      <ZoomIn size={16} />
                     </button>
                   </div>
                 </motion.div>
@@ -307,7 +307,7 @@ const TourPage = () => {
                     alt="Reekadia tour gallery preview"
                     fill
                     sizes="(max-width: 768px) 100vw, 80vw"
-                    quality={80}
+                    quality={75}
                     className="object-contain"
                   />
                   <button
@@ -320,7 +320,7 @@ const TourPage = () => {
                       setActiveIndex((activeIndex - 1 + total) % total);
                     }}
                   >
-                    <span className="material-symbols-outlined text-base">chevron_left</span>
+                    <ChevronLeft size={20} />
                   </button>
                   <button
                     type="button"
@@ -332,7 +332,7 @@ const TourPage = () => {
                       setActiveIndex((activeIndex + 1) % total);
                     }}
                   >
-                    <span className="material-symbols-outlined text-base">chevron_right</span>
+                    <ChevronRight size={20} />
                   </button>
                   <button
                     type="button"
@@ -340,7 +340,7 @@ const TourPage = () => {
                     className="absolute top-4 right-4 size-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
                     onClick={() => setActiveIndex(null)}
                   >
-                    <span className="material-symbols-outlined text-sm">close</span>
+                    <X size={16} />
                   </button>
                 </div>
               </div>
@@ -354,7 +354,7 @@ const TourPage = () => {
             <div className="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
             <div className="relative z-10 flex flex-col items-center text-center gap-6">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 mb-2">
-                <span className="material-symbols-outlined text-white text-3xl">mail</span>
+                <Mail className="text-white" size={32} />
               </div>
               <div className="space-y-2 max-w-2xl">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">JOIN THE REEKADICTS</h2>

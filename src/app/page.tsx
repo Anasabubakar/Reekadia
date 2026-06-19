@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
+import { Play, ArrowRight, ChevronDown, Sparkles, Mail } from 'lucide-react';
 import SpotifyIcon from '../components/icons/SpotifyIcon';
 import TiktokIcon from '../components/icons/TiktokIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
@@ -58,19 +59,19 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-6 justify-center mt-8">
               <a href="/music" className="group relative flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-gradient-to-br from-red-500 via-primary to-red-800 text-white text-lg font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(236,19,19,0.6)] border border-red-400/30">
-                <span className="mr-2 material-symbols-outlined animate-pulse">play_circle</span>
+                <Play fill="currentColor" size={20} className="mr-2 animate-pulse" />
                 <span>Listen Now</span>
                 <div className="absolute inset-0 rounded-full bg-white/20 blur-lg opacity-0 group-hover:opacity-30 transition-opacity"></div>
               </a>
               <a href="/tour" className="group flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-10 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white text-lg font-bold transition-all hover:scale-105 hover:border-white/40">
                 <span>View Tour Dates</span>
-                <span className="ml-2 material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </motion.div>
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce">
             <span className="text-xs uppercase tracking-widest text-gray-400">Scroll Down</span>
-            <span className="material-symbols-outlined">keyboard_arrow_down</span>
+            <ChevronDown size={24} />
           </div>
         </section>
 
@@ -82,7 +83,7 @@ export default function Home() {
               className="flex items-center gap-3 mb-8 px-2"
             >
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
-              <span className="material-symbols-outlined text-primary text-2xl" style={{ animationDuration: '4s' }}>new_releases</span>
+              <Sparkles className="text-primary" size={24} />
               <h3 className="text-white text-lg font-bold tracking-[0.2em] uppercase">Featured Release</h3>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
             </motion.div>
@@ -103,11 +104,11 @@ export default function Home() {
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-1 ring-white/10 animate-spin-slow vinyl-grooves p-[2%]">
                     <div className="relative w-full h-full rounded-full overflow-hidden border-[8px] border-[#111]">
                       <Image
-                        src="/images/song-cover-art/the-game-needs-you.png"
+                        src="/images/song-cover-art/the-game-needs-you.webp"
                         alt="The Game Needs You album cover"
                         fill
                         sizes="(max-width: 768px) 80vw, 400px"
-                        quality={75}
+                        quality={70}
                         className="object-cover"
                       />
                     </div>
@@ -213,7 +214,7 @@ export default function Home() {
               <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/30 rounded-full blur-[80px] animate-float-slow"></div>
               <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] animate-float-slow" style={{ animationDelay: '2s' }}></div>
               <div className="relative z-10 flex flex-col items-center gap-6">
-                <span className="material-symbols-outlined text-5xl text-gray-400 font-light">mail</span>
+                <Mail className="text-gray-400" size={48} strokeWidth={1} />
                 <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">JOIN THE REEKADDICTS</h2>
                 <p className="text-gray-300 max-w-md mx-auto">Sign up for exclusive tour announcements, merch drops, and behind-the-scenes content directly from Reekadia.</p>
                 <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md mt-4">

@@ -2,10 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Calendar, Mic, MapPin, ChevronDown, Send, ArrowRight } from 'lucide-react';
 import InstagramIcon from '../../components/icons/InstagramIcon';
 import X from '../../components/icons/XIcon';
 import YoutubeIcon from '../../components/icons/YoutubeIcon';
-import TiktokIcon from '../../components/icons/TiktokIcon';
+
+const iconMap: Record<string, React.ReactNode> = {
+  calendar_month: <Calendar size={24} />,
+  mic_external_on: <Mic size={24} />,
+  location_on: <MapPin size={24} />,
+};
 
 const contactDetails = [
   {
@@ -74,7 +80,7 @@ const ContactPage = () => {
                           <option className="bg-[#221010]">General Inquiry</option>
                         </select>
                         <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-                          <span className="material-symbols-outlined">expand_more</span>
+                          <ChevronDown size={24} />
                         </div>
                       </div>
                     </div>
@@ -95,7 +101,7 @@ const ContactPage = () => {
                                       </div>                      <button className="w-full md:w-auto relative overflow-hidden bg-primary hover:bg-red-600 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full shadow-[0_0_20px_rgba(236,19,19,0.4)] transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(236,19,19,0.6)]" type="button">
                         <span className="relative z-10 flex items-center justify-center gap-2">
                           Send Inquiry
-                          <span className="material-symbols-outlined text-lg">send</span>
+                          <Send size={20} />
                         </span>
                       </button>
                     </div>
@@ -115,7 +121,7 @@ const ContactPage = () => {
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
-                      <span className="material-symbols-outlined text-primary">{detail.icon}</span>
+                      {iconMap[detail.icon] || <Calendar size={24} />}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white leading-none">{detail.title}</h3>
@@ -124,7 +130,7 @@ const ContactPage = () => {
                   </div>
                   <a className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors group-hover:translate-x-2 duration-300" href={`mailto:${detail.email}`}>
                     <span className="font-medium">{detail.email}</span>
-                    <span className="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+                    <ArrowRight size={16} className="text-primary" />
                   </a>
                   <p className="text-sm text-gray-300 mt-2">{detail.manager}</p>
                   <p className="text-sm text-gray-300">{detail.phone}</p>
@@ -138,7 +144,7 @@ const ContactPage = () => {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-colors">
-                    <span className="material-symbols-outlined text-primary">location_on</span>
+                    <MapPin className="text-primary" size={24} />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white leading-none">Office Location</h3>
