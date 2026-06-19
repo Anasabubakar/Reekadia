@@ -8,7 +8,7 @@ const releases = [
     title: 'CDQ X Reekado Banks - Kawasaki',
     type: 'Single',
     link: 'https://open.spotify.com/track/14bzgxQBrUAyntSm0L41N6?si=Qt-tFdliS4qm6ovmfuF9iw',
-    imageUrl: '/images/artwork-awasaki.jpg'
+    imageUrl: '/images/song-cover-art/artwork-awasaki.jpg'
   },
   {
     title: 'Nobody',
