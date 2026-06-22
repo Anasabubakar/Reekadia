@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 const releases = [
   {
@@ -137,7 +138,7 @@ export default function MusicPage() {
                 >
                   <a href={release.link} target="_blank" rel="noopener noreferrer">
                     <div className="aspect-square bg-neutral-900 rounded-2xl mb-4 overflow-hidden relative glass-panel-light">
-                      <img src={release.imageUrl} alt={release.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                      <Image src={release.imageUrl} alt={release.title} width={500} height={500} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                         <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:scale-110 transition-transform shadow-xl">
                           <Play fill="currentColor" className="ml-1" />

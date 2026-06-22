@@ -37,11 +37,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
-  }, [pathname, isMobileMenuOpen]);
 
   return (
     <div className="w-full flex justify-center pt-6 px-4 sticky top-0 z-50">

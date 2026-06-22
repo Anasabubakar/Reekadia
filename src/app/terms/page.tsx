@@ -33,8 +33,8 @@ export default function TermsOfServicePage() {
             <ul className="list-disc pl-6 text-gray-300 space-y-2 mt-2">
               <li>Modify or copy the materials</li>
               <li>Use the materials for any commercial purpose or for any public display</li>
-              <li>Attempt to reverse engineer any software contained on Reekadia's website</li>
-              <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+              <li>Attempt to reverse engineer any software contained on Reekadia&apos;s website</li>
+              <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server</li>
             </ul>
           </section>
 
@@ -58,7 +58,7 @@ export default function TermsOfServicePage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-primary mb-4">Accuracy of Materials</h2>
             <p className="text-gray-300">
-              The materials appearing on Reekadia's website could include technical, typographical, or photographic errors. Reekadia does not warrant that any of the materials on its website are accurate, complete or current. Reekadia may make changes to the materials contained on its website at any time without notice. However Reekadia does not make any commitment to update the materials.
+               The materials appearing on Reekadia&apos;s website could include technical, typographical, or photographic errors. Reekadia does not warrant that any of the materials on its website are accurate, complete or current. Reekadia may make changes to the materials contained on its website at any time without notice. However Reekadia does not make any commitment to update the materials.
             </p>
           </section>
 

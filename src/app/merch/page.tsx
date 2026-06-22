@@ -220,7 +220,7 @@ const MerchPage = () => {
         <section className="py-20 relative border-t border-white/10">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <span className="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4 block">The Tribe</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">DON'T MISS THE DROP</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">DON&apos;T MISS THE DROP</h2>
             <p className="text-white/60 mb-8">Subscribe for exclusive early access to Vol. 2 releases and tour dates.</p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
