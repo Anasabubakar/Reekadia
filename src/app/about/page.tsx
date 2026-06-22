@@ -130,7 +130,7 @@ const AboutPage = () => {
               <div className="relative pl-8 border-l border-white/10 space-y-12 pb-8">
                 {careerMilestones.map((milestone, index) => (
                   <motion.div
-                    key={milestone.year}
+                    key={`${milestone.year}-${index}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
