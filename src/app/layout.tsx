@@ -1,23 +1,7 @@
 import type { Metadata } from 'next';
-import { Be_Vietnam_Pro, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-
-const beVietnamPro = Be_Vietnam_Pro({
-  variable: '--font-be-vietnam-pro',
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
-  display: 'swap',
-});
-
-const notoSans = Noto_Sans({
-  variable: '--font-noto-sans',
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  display: 'swap',
-});
-
 import ClientBackground from '@/components/layout/ClientBackground';
 
 export const metadata: Metadata = {
@@ -39,10 +23,8 @@ export default function RootLayout({
         <meta charSet="utf-8" />
       </head>
       <body
-        className={`${beVietnamPro.variable} ${notoSans.variable} antialiased min-h-screen flex flex-col bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white`}
+        className="antialiased min-h-screen flex flex-col bg-[#110505] text-white font-display overflow-x-hidden selection:bg-primary selection:text-white"
       >
-
-
         <ClientBackground />
         <Navbar />
         <main className="flex-grow">
