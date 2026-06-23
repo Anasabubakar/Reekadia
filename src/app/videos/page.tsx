@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const videos = [
   {
     id: 'YKfcQDurc5g',
-    title: 'CDQ X Reekado Banks - Kawasaki (Official Video)',
+    title: 'Reekado Banks Ft. Libianca - Nobody (Official Video)',
     category: 'Music Video',
   },
   {
